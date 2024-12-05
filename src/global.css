@@ -1,0 +1,126 @@
+/* NAVBAR */
+.headerNavBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 10px 80px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between; /* Ajusta espacio entre elementos */
+    align-items: center;
+    z-index: 100;
+    background-color: rgb(0, 64, 150);
+    transition: background-color ease 0.3s;
+}
+
+.headerNavBar:hover {
+    background-color: rgb(0, 24, 121);
+}
+
+.logoNavBar {
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    transform-origin: center;
+}
+
+.logoNavBar:hover {
+    transform: scale(1.1);
+}
+
+/* Burger Menu */
+.menuBurgerNavBar {
+    padding-top: 10px;
+    font-size: 30px;
+    color: white;
+    display: none;
+}
+
+/* Navbar */
+.navbarNavBar {
+    display: flex;
+    gap: 30px; /* Espacio entre los enlaces */
+}
+
+.navbarNavBar a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.navbarNavBar a:hover {
+    background-color: rgba(0, 24, 121, 0.7);
+    font-size: 19px;
+}
+
+.navbarNavBar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    width: 0;
+    height: 2px;
+    transition: width 0.3s ease;
+}
+
+.navbarNavBar a:hover::before {
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .headerNavBar {
+        height: 60px;
+        padding: 10px 30px;
+        justify-content: space-between;
+    }
+
+    .logoNavBar {
+        font-size: 24px;
+        margin: 0 auto; /* Asegura que esté centrado */
+    }
+
+    .menuBurgerNavBar {
+        cursor: pointer;
+        display: block;
+    }
+
+    .navbarNavBar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(0, 64, 150);
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .navbarNavBar.open {
+        display: flex;
+    }
+
+    .navbarNavBar a {
+        padding: 10px;
+    }
+
+    .navbarNavBar a::before {
+        display: none; /* Desactiva la animación de línea */
+    }
+
+    .navbarNavBar a:hover {
+        background-color: rgba(0, 24, 121, 0.7);
+    }
+}
+
+/* NAVBAR */
