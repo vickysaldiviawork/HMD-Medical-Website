@@ -1,0 +1,126 @@
+.headerNavBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 80px;
+    padding-left: 80px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: rgb(0, 64, 150);
+    transition: background-color ease 0.3s;
+}
+
+.headerNavBar:hover {
+    background-color: rgb(0, 24, 121);
+}
+
+.logoNavBar {
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    transition: font-size 0.3s ease;
+}
+
+.logoNavBar:hover {
+    font-size: 32px;
+}
+
+.navbarNavBar {
+    display: flex;
+    gap: 40px;
+}
+
+.navbarNavBar a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    transition: font-size 0.3s ease;
+}
+
+.navbarNavBar a:hover {
+    background-color: rgba(0, 24, 121, 0.7); /* Fondo oscuro semi-transparente */
+    font-size: 19px;
+}
+
+.navbarNavBar a {
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+.navbarNavBar a::before {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    width: 0;
+    height: 2px;
+    transition: width 0.3s ease;
+}
+
+.navbarNavBar a:hover::before {
+    width: 100%;
+}
+
+.menuBurgerNavBar {
+    padding-top: 10px;
+    font-size: 7vw; /* Usa un porcentaje de la anchura de la ventana para ajustar el tamaño */
+    color: white;
+    display: none;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .headerNavBar {
+        height: 60px;
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        justify-content: space-between; /* Distribuir los elementos a los extremos */
+        
+    }
+
+    .logoNavBar {
+        font-size: 6vw; /* Usa un porcentaje de la anchura de la ventana para ajustar el tamaño */
+        position: absolute; /* Establecer el logo como absoluto */
+        left: 50%; /* Centrar horizontalmente */
+        transform: translateX(-50%); /* Ajustar el logo para que quede exactamente centrado */
+    }
+
+    .navbarNavBar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(0, 64, 150);
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .navbarNavBar.open {
+        display: flex; /* Mostrar los enlaces cuando se activa la clase 'open' */
+    }
+
+    .menuBurgerNavBar {
+        display: block;
+        position: absolute;
+        right: 30px; /* Colocar el icono burger a la derecha */
+    }
+
+    .navbarNavBar a::before {
+        display: none; 
+    }
+
+    .navbarNavBar a:hover {
+        background-color: rgba(0, 24, 121, 0.7); 
+    }
+}
