@@ -29,10 +29,6 @@
     transform-origin: center;
 }
 
-.logoNavBar:hover {
-    transform: scale(1.1);
-}
-
 /* Burger Menu */
 .menuBurgerNavBar {
     padding-top: 10px;
@@ -132,7 +128,7 @@ h4 {
 }
 
 .generalFooter h3 {
-    animation: h3 0.5s ease-in 0s 1 normal forwards;
+    animation: h3 0.3s ease-in 0s 1 normal forwards;
     font-size: 1.5rem;
 }
 
@@ -239,13 +235,24 @@ h4 {
 
 .paginasFooter ul li {
     margin: 5px;
+    position: relative;
 }
 
 .paginasFooter ul li:hover::before {
     content: '>  ';
     color: rgb(0, 24, 121); /* Color en hover */
     font-weight: 700;
-    animation: arrowAppear 1s ease 0s 1 normal forwards;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.paginasFooter ul li::before {
+    content: '>  ';
+    color: rgb(0, 24, 121);
+    font-weight: 700;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 @keyframes arrowAppear {
@@ -402,3 +409,32 @@ h4 {
     font-weight: 700;
 }
 /********************************* NOT FOUND *********************************/
+
+
+/********************************* NO INTERNET *********************************/
+.containerNoInternet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f7fafc;
+    text-align: center;
+}
+
+.titleNoInternet {
+    font-size: 3rem;
+    color: rgb(0, 24, 121);
+    margin-bottom: 1rem;
+}
+.messageNoInternet {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.imageNoInternet {
+    width: 30vh;
+    height: 30vh;
+    margin-top: 20px;
+}
+/********************************* NO INTERNET *********************************/

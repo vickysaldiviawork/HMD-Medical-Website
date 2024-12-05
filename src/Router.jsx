@@ -4,7 +4,6 @@ import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Us from "./pages/Us";
-
 import NotFound from "./pages/NotFound"; // Agrega un componente de error si aún no existe
 
 // createBrowserRouter define las rutas de la página
