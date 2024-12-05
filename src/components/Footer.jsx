@@ -2,6 +2,7 @@ import "../global.css";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
+import { IoIosSearch } from "react-icons/io";
 
 
 const Footer = () => {
@@ -15,6 +16,7 @@ const Footer = () => {
             </div>
 
             <div className="containerFooter">
+                
                 <div className="generalFooter">
                     <h4>¿Interesado en algún producto?</h4>
                     <h3>¡Haz tu pedido ahora!</h3>
@@ -33,7 +35,7 @@ const Footer = () => {
                 </div>
 
                 <div className="paginasFooter">
-                    <h3>Navegación</h3>
+                    <h3><IoIosSearch /> Navegación</h3>
                     <ul>
                         <li><a href="/">Inicio</a></li>
                         <li><a href="/contact">Contacto</a></li>
