@@ -235,24 +235,24 @@ h4 {
 
 .paginasFooter ul li {
     margin: 5px;
-    position: relative; /* Needed for positioning the pseudo-element */
+    position: relative;
 }
 
 .paginasFooter ul li:hover::before {
     content: '>  ';
     color: rgb(0, 24, 121); /* Color en hover */
     font-weight: 700;
-    opacity: 1; /* Make it visible on hover */
-    transform: translateX(0); /* Ensure it is in the normal position */
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .paginasFooter ul li::before {
     content: '>  ';
-    color: rgb(0, 24, 121); /* Color in the normal state */
+    color: rgb(0, 24, 121);
     font-weight: 700;
-    opacity: 0; /* Make it invisible by default */
-    transform: translateX(-10px); /* Position it slightly off the left */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 @keyframes arrowAppear {
