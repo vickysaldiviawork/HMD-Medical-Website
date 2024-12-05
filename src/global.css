@@ -196,11 +196,33 @@ h4 {
 .generalFooter {
     display: flex;
     flex-direction: column; /* Elementos alineados verticalmente */
-    align-items:center; 
+    align-items: center; 
     justify-content: start;
     padding-left: 30px;
     padding-right: 30px;
 }
+
+.atencionClienteFooter {
+    display: flex;
+    flex-direction: column; /* Elementos alineados verticalmente */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.atencionClienteFooter {
+    display: flex;
+    flex-direction: column; /* Elementos alineados verticalmente */
+    align-items: center;
+}
+
+.horariosFooter p{
+    margin: 2px;
+}
+
+.dias {
+    color: rgb(0, 24, 121);
+}
+
 
 .paginasFooter {
     display: flex;
