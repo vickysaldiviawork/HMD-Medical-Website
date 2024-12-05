@@ -58,6 +58,7 @@
 
 .navbarNavBar a:hover {
     background-color: rgba(0, 24, 121, 0.7);
+    font-size: 19px;
 }
 
 .navbarNavBar a::before {
