@@ -212,6 +212,7 @@ h4 {
 
 .horariosFooter p{
     margin: 2px;
+    font-size: 2vh;
 }
 .atencionClienteFooter h3{
     margin-bottom: 6px;
@@ -240,11 +241,6 @@ h4 {
 .paginasFooter ul li {
     margin: 5px;
 }
-
-/* .paginasFooter ul li::before {
-    content: '> ';
-    opacity: 0;
-} */
 
 .paginasFooter ul li:hover::before {
     content: '>  ';
