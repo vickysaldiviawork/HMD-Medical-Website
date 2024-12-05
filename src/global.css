@@ -4,14 +4,11 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 80px;
-    padding-left: 80px;
+    height: 70px;
+    padding: 10px 80px;
     background: transparent;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Ajusta espacio entre elementos */
     align-items: center;
     z-index: 100;
     background-color: rgb(0, 64, 150);
@@ -26,16 +23,28 @@
     font-size: 30px;
     color: white;
     font-weight: 700;
-    transition: font-size 0.3s ease;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    transform-origin: center;
 }
 
 .logoNavBar:hover {
-    font-size: 32px;
+    transform: scale(1.1);
 }
 
+/* Burger Menu */
+.menuBurgerNavBar {
+    padding-top: 10px;
+    font-size: 30px;
+    color: white;
+    display: none;
+}
+
+/* Navbar */
 .navbarNavBar {
     display: flex;
-    gap: 40px;
+    gap: 30px; /* Espacio entre los enlaces */
 }
 
 .navbarNavBar a {
@@ -43,20 +52,16 @@
     font-size: 18px;
     color: white;
     font-weight: 500;
-    transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+    border-radius: 4px;
 }
 
 .navbarNavBar a:hover {
-    background-color: rgba(0, 24, 121, 0.7); /* Fondo oscuro semi-transparente */
-    font-size: 19px;
-}
-
-.navbarNavBar a {
-    transition: background-color 0.3s ease, font-size 0.3s ease;
+    background-color: rgba(0, 24, 121, 0.7);
 }
 
 .navbarNavBar a::before {
-    content: ' ';
+    content: '';
     position: absolute;
     top: 100%;
     left: 0;
@@ -70,29 +75,22 @@
     width: 100%;
 }
 
-.menuBurgerNavBar {
-    padding-top: 10px;
-    font-size: 7vw; /* Usa un porcentaje de la anchura de la ventana para ajustar el tamaño */
-    color: white;
-    display: none;
-}
-
-/* RESPONSIVE */
-@media(max-width: 768px) {
+/* Responsive Adjustments */
+@media (max-width: 768px) {
     .headerNavBar {
         height: 60px;
-        padding: 10px;
-        padding-left: 30px;
-        padding-right: 30px;
-        justify-content: space-between; /* Distribuir los elementos a los extremos */
-        
+        padding: 10px 30px;
+        justify-content: space-between;
     }
 
     .logoNavBar {
-        font-size: 6vw; /* Usa un porcentaje de la anchura de la ventana para ajustar el tamaño */
-        position: absolute; /* Establecer el logo como absoluto */
-        left: 50%; /* Centrar horizontalmente */
-        transform: translateX(-50%); /* Ajustar el logo para que quede exactamente centrado */
+        font-size: 24px;
+        margin: 0 auto; /* Asegura que esté centrado */
+    }
+
+    .menuBurgerNavBar {
+        cursor: pointer;
+        display: block;
     }
 
     .navbarNavBar {
@@ -108,21 +106,20 @@
     }
 
     .navbarNavBar.open {
-        display: flex; /* Mostrar los enlaces cuando se activa la clase 'open' */
+        display: flex;
     }
 
-    .menuBurgerNavBar {
-        display: block;
-        position: absolute;
-        right: 30px; /* Colocar el icono burger a la derecha */
+    .navbarNavBar a {
+        padding: 10px;
     }
 
     .navbarNavBar a::before {
-        display: none; 
+        display: none; /* Desactiva la animación de línea */
     }
 
     .navbarNavBar a:hover {
-        background-color: rgba(0, 24, 121, 0.7); 
+        background-color: rgba(0, 24, 121, 0.7);
     }
 }
+
 /* NAVBAR */
