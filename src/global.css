@@ -140,7 +140,7 @@ h4 {
     right: 0;
     bottom: 0;
     border-top: 1.5px solid rgb(237, 237, 237);
-
+    z-index: 100;
     padding-bottom: 50px;
     box-shadow: 0 -5px 10px rgb(237, 237, 237); /* Sombra en el borde superior */
 }
@@ -538,6 +538,8 @@ h4 {
     justify-content: center;
     align-items: center;
     padding: 2em;
+    flex-direction: column;
+    position: relative; /* Esto es importante para el pseudo-elemento */
 }
 
 .contactPage::before {
@@ -546,17 +548,16 @@ h4 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; /* Asegura que cubra toda la altura de la pantalla */
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
 
-
 .contactInfo {
-    margin: 2em auto; 
+    margin: 1em auto; 
     padding: 20px 40px;
     width: 100%; 
-    max-width: fit-content;
+    max-width: 100vh;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.6);;
     border: 1.5px solid rgb(237, 237, 237);
     border-radius: 8px; 
@@ -576,6 +577,26 @@ h4 {
 
 }
 
+.adicionalContact {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 2em; 
+}
+
+/* > indica el elemento inmediato dentro de la clase */
+.adicionalContact > div { 
+    flex: 1; 
+    min-width: 200px; 
+    border-right: 1.5px solid rgba(0, 0, 0, 0.2); /* Borde entre los divs */
+    padding-right: 1.5em; /* Asegura que el borde no quede pegado al contenido */
+}
+
+.adicionalContact > div:last-child {
+    border-right: none; /* El último div no tendrá borde */
+    padding-right: 0;
+}
+
 .info-item {
     display: flex;
     align-items: center;
@@ -589,8 +610,9 @@ h4 {
     background-color: #f9f9f9;
     transition: all 0.3s ease-in-out;
 }
+
 .info-item a{
-    cursor: pointer;
+    cursor:pointer;
 }
 
 .info-item:hover {
@@ -609,7 +631,6 @@ h4 {
     color: white; 
 }
 
-
 .instagramInfoContact {
     display: flex;
     align-items: center; 
@@ -617,7 +638,7 @@ h4 {
     gap: 1em; 
     padding: 1em 1.5em;
     margin: 1em auto;
-    width: fit-content; 
+    width: 100%; 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
     border: 1.5px solid rgb(237, 237, 237);
     border-radius: 10px;
@@ -655,4 +676,77 @@ h4 {
 .instagramInfoContact:hover .fa-instagram {
     color: white; 
 }
+
+@media (max-width: 768px) {
+    .contact-icon {
+        display: none;
+    }
+    
+    .adicionalContact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .adicionalContact > div {
+        padding-right: 0;
+        margin-bottom: 1em;
+        border-right: none; /* El borde se elimina cuando está en columna */
+
+        border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
+        padding-bottom: 1.5em;
+        
+    }
+
+    .adicionalContact > div:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+
+}
+
+/* Para pantallas con un ancho máximo de 424px */
+@media (max-width: 424px) {
+    .contact-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem; 
+    }
+
+    .info-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .telfContact {
+        display: inline-block
+    }
+    
+    .emailContact, .direccContact {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .info-item:hover .emailContact,
+    .info-item:hover .direccContact {
+        display: inline; /* Mostrar el texto */
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        font-size: 0.8rem;
+    }
+
+    .info-item:hover .contact-icon {
+        opacity: 0;
+    }
+
+}
+
+
 /********************************* CONTACTO *********************************/
