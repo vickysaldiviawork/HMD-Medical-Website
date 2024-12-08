@@ -1,3 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    flex: 1; /* Permite que este contenedor crezca para ocupar el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    /* padding-bottom: 60px; Ajusta el espacio para que el footer no se solape */
+}
+
 /********************************* NAVBAR **********************************/
 .headerNavBar {
     position: fixed;
@@ -121,19 +166,15 @@
 /********************************* NAVBAR *********************************/
 
 /********************************* FOOTER *********************************/
-
 h4 {
     font-weight: 300;
     font-size: 1.25em;
 }
-
 .generalFooter h3 {
     font-size: 1.5em;
 }
 
-
-
-.footerFooter {
+footer {
     background: white;
     position: relative;
     left: 0;
