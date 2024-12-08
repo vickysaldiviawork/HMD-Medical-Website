@@ -39,6 +39,5 @@ main {
     flex: 1; /* Permite que este contenedor crezca para ocupar el espacio disponible */
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
-    padding-bottom: 60px; /* Ajusta el espacio para que el footer no se solape */
+    /* padding-bottom: 60px; Ajusta el espacio para que el footer no se solape */
 }
