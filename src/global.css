@@ -20,7 +20,7 @@
 }
 
 .logoNavBar {
-    font-size: 1.875rem;
+    font-size: 1.875em;
     color: white;
     font-weight: 700;
     transition: transform 0.3s ease, font-size 0.3s ease;
@@ -32,7 +32,7 @@
 /* Burger Menu */
 .menuBurgerNavBar {
     padding-top: 10px;
-    font-size: 1.875rem;
+    font-size: 1.875em;
     color: white;
     display: none;
 }
@@ -40,12 +40,12 @@
 /* Navbar */
 .navbarNavBar {
     display: flex;
-    gap: 1.875rem; /* Espacio entre los enlaces */
+    gap: 1.875em; /* Espacio entre los enlaces */
 }
 
 .navbarNavBar a {
     position: relative;
-    font-size: 1.125rem;
+    font-size: 1.125em;
     color: white;
     font-weight: 500;
     transition: font-size 0.3s ease, background-color 0.3s ease;
@@ -54,7 +54,7 @@
 
 .navbarNavBar a:hover {
     background-color: rgba(0, 24, 121, 0.7);
-    font-size: 1.1875rem;
+    font-size: 1.1875em;
 }
 
 .navbarNavBar a::before {
@@ -124,34 +124,24 @@
 
 h4 {
     font-weight: 300;
-    font-size: 1.25rem;
+    font-size: 1.25em;
 }
 
 .generalFooter h3 {
-    animation: h3 0.3s ease-in 0s 1 normal forwards;
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
-@keyframes h3 {
-    0% {
-        transform: scale(0.5); /* Inicialmente escalado a 2 veces su tamaño */
-    }
-
-    100% {
-        transform: scale(1); /* Escala al tamaño original */
-    }
-}
 
 
 .footerFooter {
     background: white;
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     bottom: 0;
     border-top: 1.5px solid rgb(237, 237, 237);
-    margin-top: 50px;
-    margin-bottom: 50px;
+    z-index: 100;
+    padding-bottom: 50px;
     box-shadow: 0 -5px 10px rgb(237, 237, 237); /* Sombra en el borde superior */
 }
 
@@ -159,9 +149,9 @@ h4 {
     display: flex; 
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     border-bottom: 1.5px solid rgb(237, 237, 237);
 
 }
@@ -174,7 +164,7 @@ h4 {
 }
 
 .topFooter .infoHMD {
-    font-size: 0.9375rem;
+    font-size: 0.9375em;
     padding: 2px;
     line-height: 1.5;
 }
@@ -207,7 +197,7 @@ h4 {
 
 .horariosFooter p{
     margin: 2px;
-    font-size: 1rem;
+    font-size: 1em;
 }
 .atencionClienteFooter h3{
     margin-bottom: 6px;
@@ -296,8 +286,8 @@ h4 {
 }
 
 .botonPedidoFooter {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
+    margin-top: 1em;
+    padding: 0.5em 1em;
     background-color: #004096;
     color: white;
     border: none;
@@ -318,8 +308,8 @@ h4 {
 .instagramInfo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
+    gap: 0.5em;
+    margin-top: 1em;
 }
 
 .instagramInfo a {
@@ -351,7 +341,7 @@ h4 {
     .bottomFooter {
         flex-direction: column; 
         align-items: center; 
-        gap: 1rem; /* Aumenta el espacio entre elementos */
+        gap: 1em; /* Aumenta el espacio entre elementos */
     }
 
     .emailInfo, .instagramInfo {
@@ -363,10 +353,10 @@ h4 {
         word-wrap: break-word;
     }
     .generalFooter h3, .generalFooter h4{
-        font-size: 1rem;}
+        font-size: 1em;}
     
         .containerFooter > * {
-            margin-bottom: 2rem; /* Aumenta la separación entre cada "bloque" principal */
+            margin-bottom: 2em; /* Aumenta la separación entre cada "bloque" principal */
         }
         
 }
@@ -384,20 +374,20 @@ h4 {
 }
 
 .titleNotFound {
-    font-size: 6rem;
+    font-size: 6em;
     color: rgb(0, 24, 121);
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
 }
 
 .messageNotFound {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.5em;
+    margin-bottom: 2em;
 }
 
 .buttonNotFound {
     background-color: #004096;
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75em 1.5em;
     border-radius: 18px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -423,13 +413,13 @@ h4 {
 }
 
 .titleNoInternet {
-    font-size: 3rem;
+    font-size: 3em;
     color: rgb(0, 24, 121);
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
 }
 .messageNoInternet {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.5em;
+    margin-bottom: 2em;
 }
 
 .imageNoInternet {
@@ -535,3 +525,228 @@ h4 {
     visibility: visible;
 }
 /********************************* WHATSAPP POPUP *********************************/
+
+/********************************* CONTACTO *********************************/
+.contactPage {
+    background-image: url('assets/backgroundContacto.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    flex-direction: column;
+    position: relative; /* Esto es importante para el pseudo-elemento */
+}
+
+.contactPage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Asegura que cubra toda la altura de la pantalla */
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.contactInfo {
+    margin: 1em auto; 
+    padding: 20px 40px;
+    width: 100%; 
+    max-width: 100vh;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.6);;
+    border: 1.5px solid rgb(237, 237, 237);
+    border-radius: 8px; 
+    background-color: #fff;
+    z-index: 2; 
+}
+
+.contactInfo h2 {
+    font-size: 2.2em;
+    text-align: center;
+    color: rgb(0, 24, 121);
+}
+
+.contactInfo p {
+    text-align: center;
+    color: rgb(0, 24, 121);
+
+}
+
+.adicionalContact {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 2em; 
+}
+
+/* > indica el elemento inmediato dentro de la clase */
+.adicionalContact > div { 
+    flex: 1; 
+    min-width: 200px; 
+    border-right: 1.5px solid rgba(0, 0, 0, 0.2); /* Borde entre los divs */
+    padding-right: 1.5em; /* Asegura que el borde no quede pegado al contenido */
+}
+
+.adicionalContact > div:last-child {
+    border-right: none; /* El último div no tendrá borde */
+    padding-right: 0;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+    margin: 1em 0;
+    padding: 1em 1.5em;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1.5px solid rgb(237, 237, 237);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+}
+
+.info-item a{
+    cursor:pointer;
+}
+
+.info-item:hover {
+    background-color: rgb(0, 24, 121);
+    color: white; 
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-4px); 
+}
+
+.contact-icon {
+    font-size: 1.5em; 
+    color: rgb(0, 24, 121); 
+}
+
+.info-item:hover .contact-icon {
+    color: white; 
+}
+
+.instagramInfoContact {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 1em; 
+    padding: 1em 1.5em;
+    margin: 1em auto;
+    width: 100%; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border: 1.5px solid rgb(237, 237, 237);
+    border-radius: 10px;
+    background-color: #f9f9f9; 
+    font-size: 1.2em;
+    text-decoration: none;
+    color: rgb(0, 24, 121); 
+    transition: all 0.3s ease-in-out; 
+}
+
+.instagramInfoContact:hover {
+    background-color: rgb(0, 24, 121); 
+    color: white; 
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-4px); 
+}
+
+.instagramInfoContact a {
+    text-decoration: none; 
+    color: inherit; 
+    font-weight: bold;
+    transition: color 0.3s ease-in-out; 
+}
+
+.instagramInfoContact:hover a {
+    color: white; 
+}
+
+.instagramInfoContact .fa-instagram {
+    font-size: 1.5em; 
+    color: inherit; 
+    transition: color 0.3s ease-in-out;
+}
+
+.instagramInfoContact:hover .fa-instagram {
+    color: white; 
+}
+
+@media (max-width: 768px) {
+    .contact-icon {
+        display: none;
+    }
+    
+    .adicionalContact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .adicionalContact > div {
+        padding-right: 0;
+        margin-bottom: 1em;
+        border-right: none; /* El borde se elimina cuando está en columna */
+
+        border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
+        padding-bottom: 1.5em;
+        
+    }
+
+    .adicionalContact > div:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+
+}
+
+/* Para pantallas con un ancho máximo de 424px */
+@media (max-width: 424px) {
+    .contact-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem; 
+    }
+
+    .info-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .telfContact {
+        display: inline-block
+    }
+    
+    .emailContact, .direccContact {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .info-item:hover .emailContact,
+    .info-item:hover .direccContact {
+        display: inline; /* Mostrar el texto */
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        font-size: 0.8rem;
+    }
+
+    .info-item:hover .contact-icon {
+        opacity: 0;
+    }
+
+}
+
+
+/********************************* CONTACTO *********************************/
