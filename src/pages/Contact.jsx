@@ -1,5 +1,4 @@
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram } from 'react-icons/fa';  // Icons for the contact details
-import "../global.css";
 
 const Contact = () => {
     const openWhatsApp = () => {

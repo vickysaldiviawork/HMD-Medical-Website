@@ -20,7 +20,7 @@ const Footer = () => {
                 <div className="generalFooter">
                     <h4>¿Interesado en algún producto?</h4>
                     <h3>¡Haz tu pedido ahora!</h3>
-                    <button className="botonPedidoFooter">Contáctanos</button>
+                    <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="botonPedidoFooter">Contáctanos</a>
                 </div>
 
                 <div className="atencionClienteFooter">
