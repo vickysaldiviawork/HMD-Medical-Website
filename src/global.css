@@ -60,17 +60,15 @@ main {
     justify-content: space-between; /* Ajusta espacio entre elementos */
     align-items: center;
     z-index: 100;
-    background-color: var(--color-primario);
+    background-color: white;
     transition: background-color ease 0.3s;
+    border-bottom: 1px solid var(--color-primario);
 }
 
-.headerNavBar:hover {
-    background-color: var(--color-secundario);
-}
 
 .logoNavBar {
     font-size: 1.875em;
-    color: white;
+    color: var(--color-primario);
     font-weight: 700;
     transition: transform 0.3s ease, font-size 0.3s ease;
     text-align: center;
@@ -82,7 +80,7 @@ main {
 .menuBurgerNavBar {
     padding-top: 10px;
     font-size: 1.875em;
-    color: white;
+    color: var(--color-primario);
     display: none;
 }
 
@@ -95,14 +93,14 @@ main {
 .navbarNavBar a {
     position: relative;
     font-size: 1.125em;
-    color: white;
+    color: var(--color-primario);
     font-weight: 500;
     transition: font-size 0.3s ease, background-color 0.3s ease;
     border-radius: 4px;
 }
 
 .navbarNavBar a:hover {
-    background-color: rgba(0, 24, 121, 0.7);
+    font-weight: bolder;
     font-size: 1.1875em;
 }
 
@@ -111,7 +109,7 @@ main {
     position: absolute;
     top: 100%;
     left: 0;
-    background: white;
+    background: var(--color-primario);
     width: 0;
     height: 2px;
     transition: width 0.3s ease;
@@ -187,7 +185,7 @@ footer {
     border-top: 1.5px solid rgb(237, 237, 237);
     z-index: 100;
     padding-bottom: 50px;
-    box-shadow: 0 -5px 10px rgb(237, 237, 237); /* Sombra en el borde superior */
+    
 }
 
 .topFooter {
@@ -336,7 +334,7 @@ footer {
     background-color: var(--color-primario);
     color: white;
     border: none;
-    border-radius: 18px;
+    border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease; /* Agregar transición para el transform */
 }
@@ -400,10 +398,9 @@ footer {
     .generalFooter h3, .generalFooter h4{
         font-size: 1em;}
     
-        .containerFooter > * {
-            margin-bottom: 2em; /* Aumenta la separación entre cada "bloque" principal */
-        }
-        
+    .containerFooter > * {
+        margin-bottom: 2em;
+    }
 }
 /********************************* FOOTER *********************************/
 
@@ -488,41 +485,10 @@ footer {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     width: 250px;
+    
     }
 
-.contentWhatsappPopUp {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap: 15px;
-}
 
-.buttonWhatsappPopUp {
-    background-color: #fff;
-    color: #0078d4;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    font-size: 16px;
-}
-
-.topPopUp {
-    align-self: flex-end;
-    margin-bottom: 10px;
-}
-
-.minimizeButtonWhatsappPopUp {
-    background: transparent;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: #0078d4;
-}
 
 .iconWhatsappPopUp {
     position: fixed;
@@ -539,6 +505,51 @@ footer {
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease; /* Transición suave para el ícono */
+    animation: bounceTop 1s linear 0s 1 normal forwards;
+}
+
+@keyframes bounceTop {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform: translateY(-250px);
+    }
+
+    38% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    55% {
+        animation-timing-function: ease-in;
+        transform: translateY(-65px);
+    }
+
+    72% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+
+    81% {
+        animation-timing-function: ease-in;
+        transform: translateY(-28px);
+    }
+
+    90% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+
+    95% {
+        animation-timing-function: ease-in;
+        transform: translateY(-8px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
 }
 
 .iconWhatsappPopUp:hover {
@@ -818,7 +829,7 @@ footer {
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100%;
-    min-height: 60vh;
+    min-height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -973,10 +984,11 @@ footer {
 }
 
 .secondSectionHome h1 {
-    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-size: 2.5rem;
     line-height: 100%;
     color: var(--color-primario);
-    padding: 20px;
+    padding: 40px;
     font-weight: 600;
     position: relative; /* Asegura que esté sobre el pseudo-elemento */
     z-index: 1;
@@ -998,7 +1010,6 @@ footer {
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
-    transition: transform 0.5s ease, box-shadow 0.3s ease, background 0.3s ease;
     max-width: 20rem; 
     width: 100%; 
     height: 100%; 
@@ -1007,6 +1018,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .caracteristicaItem:hover {
@@ -1113,7 +1125,7 @@ footer {
     background-color: white;
     color: var(--color-primario);
     border: none;
-    border-radius: 18px;
+    border-radius: 50px;
     cursor: pointer;
     transition: font-weight 0.1s ease;
 }
@@ -1138,7 +1150,7 @@ footer {
     background-color: var(--color-primario);
     color: white;
     border: none;
-    border-radius: 18px;
+    border-radius: 50px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease, font-weight 0.3s ease;
 }
@@ -1157,57 +1169,243 @@ footer {
 }
 
 .thirdSectionHome h1 {
-    margin-bottom: 30px;
     font-size: 2.5rem;
     color: var(--color-primario);
+    text-align: center;
+
+    font-weight: 600;
+}
+
+.thirdSectionHome h1 a {
+    color: var(--color-primario); 
+    text-decoration: none; 
+    font-weight: bold; 
+    position: relative; 
+    display: inline-block; 
+    transition: color 0.3s ease; 
+}
+
+.thirdSectionHome h1 a::after {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 100%; 
+    height: 3px; 
+    background: var(--color-secundario); 
+    transform: scaleX(0); 
+    transform-origin: left; 
+    transition: transform 0.3s ease; 
+    
+}
+
+.thirdSectionHome h1 a:hover::after {
+    transform: scaleX(1); 
+}
+
+.thirdSectionHome h1 a:hover{
+    animation: shakeBottom 1.5s ease 0s 1 normal forwards;
+}
+@keyframes shakeBottom {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 100%;
+	}
+
+	10% {
+		transform: rotate(2deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(-4deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(4deg);
+	}
+
+	80% {
+		transform: rotate(-2deg);
+	}
+
+	90% {
+		transform: rotate(2deg);
+	}
 }
 
 .catalogContainer {
     display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(4, 1fr); 
     justify-items: center; 
+    justify-content: center;
+    gap: 10px;
     width: 100%;
-    max-width: 1200px; 
     margin: 0 auto; 
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
     .catalogContainer {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 600px) {
     .catalogContainer {
-        grid-template-columns: repeat(1, 1fr); /* Una columna en pantallas pequeñas */
+        grid-template-columns: repeat(1, 1fr); 
     }
 }
 
 
 
-/* Sección 4: Call to Action */
 .fourthSectionHome {
-    background: var(--color-primario);
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80vh; 
+    padding: 20px;
+    gap: 60px;
 }
 
-.fourthSectionHome .buttonToContact {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 25px;
-    background: #fff;
+
+.imageContainer {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    width: 50%; 
+    height: 100%;
+    
+}
+
+.zoomImage {
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/antibacterial.png'); 
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+    border-radius: 10rem;
+    border-top-right-radius: 0;
+    
+}
+
+
+.contentContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    padding-left: 20px;
+    text-align: left;
     color: var(--color-primario);
+}
+
+.contentContainer h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contentContainer p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.ctaButton {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
 }
 
-.fourthSectionHome .buttonToContact:hover {
-    background: #f8f9fa;
+.ctaButton:hover {
+    background-color: #0056b3;
 }
+
+
+@media (max-width: 1024px) {
+    .fourthSectionHome {
+        flex-direction: column; 
+        gap: 0px;
+    }
+
+    .imageContainer {
+        width: 100%; 
+        height: 50vh; 
+    }
+    .zoomImage{
+        border-radius: 0;
+    }
+
+    .contentContainer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .contentContainer h1 {
+        font-size: 2.5rem;
+    }
+
+    .contentContainer p {
+        font-size: 1.2rem;
+    }
+
+    .ctaButton {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .imageContainer {
+        height: 40vh;
+    }
+
+    .contentContainer h1 {
+        font-size: 2rem;
+    }
+
+    .contentContainer p {
+        font-size: 1rem;
+    }
+
+    .ctaButton {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .imageContainer {
+        height: 30vh;
+    }
+
+    .contentContainer h1 {
+        font-size: 1.5rem;
+    }
+
+    .contentContainer p {
+        font-size: 0.9rem;
+    }
+
+    .ctaButton {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}
+
+
+
 .firstSectionHome, .secondSectionHome, .thirdSectionHome, .fourthSectionHome {
     width: 100%;
 }
@@ -1217,16 +1415,84 @@ footer {
 /********************************* FLIP CARD *********************************/
 .flipCard {
     position: relative;
-    width: 22rem;
-    height: 12rem;
-    background: white;
+    width: 100%;
+    min-width: 260px;
+    max-width: 400px;
+    height: 30rem;
     border-radius: 1.5rem;
-    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
-    transition: height 0.3s ease;
+    border: 8px solid white;
+    box-shadow: 25px 25px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
 
-.flipCard:hover {
-    height: 20rem;
+.cardImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 1.5rem; 
+    transition: transform 0.3s ease-in-out; 
 }
 
+.flipCard:hover .cardImg {
+    transform: scale(1.1); 
+}
+
+.cardBody {
+    position: absolute; /* Para que se posicione relativo a .flipCard */
+    top: 0;
+    right: -100%; /* Oculto inicialmente */
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: rgb(0, 64, 150, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 1.5rem; /* Asegura que el cuerpo siga la curva del borde */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.6s ease-in-out; /* Define que "right" se anime */
+}
+
+/* Mueve el cuerpo hacia su posición al hacer hover */
+.flipCard:hover .cardBody {
+    right: 0; /* Se desliza a la posición visible */
+}
+
+.cardBody h1 {
+    font-size: 2rem; 
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+.cardInfo {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 20px 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+.cardButton {
+    display: inline-block;
+    font-size: 1rem;
+    margin-top: 1em;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, font-weight 0.3s ease;
+    padding: 0.8rem 1.5rem;
+}
+
+.cardButton:hover {
+    background-color: var(--color-secundario);
+    transform: scale(1.1); 
+}
 /********************************* FLIP CARD *********************************/

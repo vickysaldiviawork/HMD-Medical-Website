@@ -4,28 +4,34 @@ import { FaTruckFast } from "react-icons/fa6";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { TbPigMoney } from "react-icons/tb";
 
+import AntibacterialImg from "../assets/antibacterial.png";
+import EcosonogramaImg from "../assets/ecosonograma.png";
+import DesinfectanteImg from "../assets/desinfectante.png";
+import MuestrasImg from "../assets/muestras.png";
+
+
 const Home = () => {
 
     const categories = [
         {
             title: "Antibacteriales y Geles",
             description: "Geles antibacteriales en diversas presentaciones, desde 100ml hasta galones.",
-            link: "assets/antibacterial.png"
+            link: AntibacterialImg 
         },
         {
             title: "Biogel y Soluciones Ultrasónicas",
             description: "Productos ideales para diagnósticos y procedimientos clínicos.",
-            link: "assets/ecosonograma.png"
+            link: EcosonogramaImg 
         },
         {
             title: "Soluciones Desinfectantes",
             description: "Clorhexidina y amonio cuaternario en galones para desinfección.",
-            link: "assets/desinfectante.png"
+            link: DesinfectanteImg 
         },
         {
             title: "Recolectores y Kits Médicos",
             description: "Recolectores de orina y heces, además de kits desechables.",
-            link: "assets/muestras.png"
+            link: MuestrasImg 
         }
     ];
 
@@ -45,7 +51,7 @@ const Home = () => {
                 <section className="secondSectionHome">
                     <div className="contentWrapper">
                         <div className="titleWrapper">
-                            <h1>¿POR QUÉ ELEGIRNOS?</h1>
+                            <h1>¿Por qué elegirnos?</h1>
                         </div>
                         <div className="caracteristicasHomePage">
                             <div className="caracteristicaItem">
@@ -98,27 +104,37 @@ const Home = () => {
 
                 {/* Tercera Sección: Acceso al catálogo */}
                 <section className="thirdSectionHome">
-                    <h1>Explora nuestro catálogo</h1>
-                    <div className="catalogContainer">
-                        {categories.map((category, index) => (
-                            <FlipCard
-                                key={index}
-                                title={category.title}
-                                description={category.description}
-                                link={category.link}
-                            />
-                        ))}
+                    <div className="contentWrapper">
+                        <h1>Explora nuestro <a href="">catálogo</a></h1>
+                        <div className="catalogContainer">
+                            {categories.map((category, index) => (
+                                <FlipCard
+                                    key={index}
+                                    title={category.title}
+                                    description={category.description}
+                                    link={category.link}
+                                />
+                            ))}
+                        </div>
+                        <h1>...¡y más!</h1>
                     </div>
                 </section>
 
                 {/* Cuarta Sección: Call to Action */}
                 <section className="fourthSectionHome">
-                    <div className="contentWrapper">
+                    <div className="imageContainer">
+                        <div className="zoomImage"></div>
+                    </div>
+                    <div className="contentContainer">
                         <h1>Contáctanos hoy</h1>
                         <p>Haz tu pedido ahora y garantiza los mejores productos para tu institución o negocio.</p>
-                        <a href="/contacto" className="buttonToContact">Contáctanos</a>
+                        <a href="/contacto" className="botonANosotros">Contáctanos</a>
                     </div>
                 </section>
+
+
+
+
             </div>
 
             {/* WhatsApp PopUp */}
