@@ -12,8 +12,6 @@
     --color-secundario: rgb(0, 24, 121);
 }
 
-
-
 a {
     text-decoration: none;
 }
@@ -22,11 +20,12 @@ main {
     flex: 1; /* Permite que este contenedor crezca para ocupar el espacio disponible */
     display: flex;
     flex-direction: column;
-    /* padding-bottom: 60px; Ajusta el espacio para que el footer no se solape */
 }
 
+
+/********************************* NAVBAR *********************************/
 /********************************* NAVBAR **********************************/
-.headerNavBar {
+.header-navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -43,8 +42,7 @@ main {
     border-bottom: 1px solid var(--color-primario);
 }
 
-
-.logoNavBar {
+.logo-navbar {
     font-size: 1.875em;
     color: var(--color-primario);
     font-weight: 700;
@@ -54,21 +52,19 @@ main {
     transform-origin: center;
 }
 
-/* Burger Menu */
-.menuBurgerNavBar {
+.menu-burger-navbar {
     padding-top: 10px;
     font-size: 1.875em;
     color: var(--color-primario);
     display: none;
 }
 
-/* Navbar */
-.navbarNavBar {
+.links-navbar {
     display: flex;
     gap: 1.875em; /* Espacio entre los enlaces */
 }
 
-.navbarNavBar a {
+.links-navbar a {
     position: relative;
     font-size: 1.125em;
     color: var(--color-primario);
@@ -77,12 +73,12 @@ main {
     border-radius: 4px;
 }
 
-.navbarNavBar a:hover {
+.links-navbar a:hover {
     font-weight: bolder;
     font-size: 1.1875em;
 }
 
-.navbarNavBar a::before {
+.links-navbar a::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -93,28 +89,24 @@ main {
     transition: width 0.3s ease;
 }
 
-.navbarNavBar a:hover::before {
+.links-navbar a:hover::before {
     width: 100%;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .headerNavBar {
+    .header-navbar {
         height: 60px;
         padding: 10px 30px;
         justify-content: space-between;
     }
-
-    .logoNavBar {
+    .logo-navbar {
         margin: 0 auto; /* Asegura que esté centrado */
     }
-
-    .menuBurgerNavBar {
+    .menu-burger-navbar {
         cursor: pointer;
         display: block;
     }
-
-    .navbarNavBar {
+    .links-navbar {
         display: none;
         flex-direction: column;
         position: absolute;
@@ -125,32 +117,31 @@ main {
         padding: 20px;
         gap: 10px;
     }
-
-    .navbarNavBar.open {
+    .links-navbar.open {
         display: flex;
     }
-
-    .navbarNavBar a {
+    .links-navbar a {
         padding: 10px;
     }
-
-    .navbarNavBar a::before {
+    .links-navbar a::before {
         display: none; /* Desactiva la animación de línea */
     }
-
-    .navbarNavBar a:hover {
+    .links-navbar a:hover {
         background-color: rgba(0, 24, 121, 0.7);
     }
 }
-
+/********************************* NAVBAR *********************************/
 /********************************* NAVBAR *********************************/
 
+
+/********************************* FOOTER *********************************/
 /********************************* FOOTER *********************************/
 h4 {
     font-weight: 300;
     font-size: 1.25em;
 }
-.generalFooter h3 {
+
+.general-footer h3 {
     font-size: 1.5em;
 }
 
@@ -166,7 +157,7 @@ footer {
     
 }
 
-.topFooter {
+.top-footer {
     display: flex; 
     align-items: center;
     justify-content: space-evenly;
@@ -177,21 +168,20 @@ footer {
 
 }
 
-.topFooter img {
+.top-footer img {
     max-width: 100px;
     height: auto;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.topFooter .infoHMD {
+.top-footer .text-top-footer {
     font-size: 0.9375em;
     padding: 2px;
     line-height: 1.5;
 }
 
-
-.containerFooter {
+.container-footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Define dos columnas adaptativas */
     
@@ -199,7 +189,7 @@ footer {
     padding-bottom: 30px;
 }
 
-.generalFooter {
+.general-footer {
     text-align: center;
     display: flex;
     flex-direction: column; /* Elementos alineados verticalmente */
@@ -209,18 +199,17 @@ footer {
     padding-right: 30px;
 }
 
-
-.atencionClienteFooter {
+.atencion-cliente-footer {
     display: flex;
     flex-direction: column; /* Elementos alineados verticalmente */
     align-items: center;
 }
 
-.horariosFooter p{
+.horarios-atencion p{
     margin: 2px;
     font-size: 1em;
 }
-.atencionClienteFooter h3{
+.atencion-cliente-footer h3{
     margin-bottom: 6px;
 }
 
@@ -228,8 +217,7 @@ footer {
     color: var(--color-secundario);
 }
 
-
-.paginasFooter {
+.paginas-footer {
     display: flex;
     flex-direction: column; /* Elementos alineados verticalmente */
     align-items: flex-start; /* Alinea los elementos al inicio */
@@ -239,17 +227,17 @@ footer {
     
 }
 
-.paginasFooter ul {
+.paginas-footer ul {
     list-style: none;
     padding: 0;
 }
 
-.paginasFooter ul li {
+.paginas-footer ul li {
     margin: 5px;
     position: relative;
 }
 
-.paginasFooter ul li:hover::before {
+.paginas-footer ul li:hover::before {
     content: '>  ';
     color: var(--color-secundario); /* Color en hover */
     font-weight: 700;
@@ -257,7 +245,7 @@ footer {
     transform: translateX(0);
 }
 
-.paginasFooter ul li::before {
+.paginas-footer ul li::before {
     content: '>  ';
     color: var(--color-secundario);
     font-weight: 700;
@@ -278,7 +266,7 @@ footer {
 	}
 }
 
-.paginasFooter a {
+.paginas-footer a {
     text-decoration: none;
     color: black;
     position: relative; /* Añadido */
@@ -286,12 +274,12 @@ footer {
     
 }
 
-.paginasFooter a:hover {
+.paginas-footer a:hover {
     color: var(--color-secundario); /* Color en hover */
     font-weight: 700;
 }
 
-.paginasFooter a::before {
+.paginas-footer a::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -302,11 +290,11 @@ footer {
     transition: width 0.3s ease; 
 }
 
-.paginasFooter a:hover::before {
+.paginas-footer a:hover::before {
     width: 100%; /* Expande la línea al 100% */
 }
 
-.botonPedidoFooter {
+.boton-footer {
     margin-top: 1em;
     padding: 0.5em 1em;
     background-color: var(--color-primario);
@@ -317,41 +305,39 @@ footer {
     transition: background-color 0.3s ease, transform 0.3s ease; /* Agregar transición para el transform */
 }
 
-.botonPedidoFooter:hover {
+.boton-footer:hover {
     background-color: var(--color-secundario);
     transform: scale(1.3);
     font-weight: 500;
 
 }
 
-
-.emailInfo, 
-.instagramInfo {
+.email-info, 
+.instagram-info {
     display: flex;
     align-items: center;
     gap: 0.5em;
     margin-top: 1em;
 }
 
-.instagramInfo a {
+.instagram-info a {
     color: black;
     text-decoration: none;
 }
 
-.instagramInfo:hover, .instagramInfo a:hover{
+.instagram-info:hover, .instagram-info a:hover{
     color: var(--color-secundario);
     text-decoration: none;
     font-weight: 700;
 }
 
-.emailInfo:hover,  .emailInfo a:hover{
+.email-info:hover,  .email-info a:hover{
     color: var(--color-secundario);
     text-decoration: none;
     font-weight: 700;
 }
 
-
-.bottomFooter {
+.bottom-footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -359,31 +345,35 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .bottomFooter {
+    .bottom-footer {
         flex-direction: column; 
         align-items: center; 
         gap: 1em; /* Aumenta el espacio entre elementos */
     }
 
-    .emailInfo, .instagramInfo {
+    .email-info, .instagram-info {
         width: 100%; 
         justify-content: center; 
     }
 
-    .instagramInfo a {
+    .instagram-info a {
         word-wrap: break-word;
     }
-    .generalFooter h3, .generalFooter h4{
+    .general-footer h3, .general-footer h4{
         font-size: 1em;}
     
-    .containerFooter > * {
+    .container-footer > * {
         margin-bottom: 2em;
     }
 }
 /********************************* FOOTER *********************************/
+/********************************* FOOTER *********************************/
+
+
 
 /********************************* NOT FOUND *********************************/
-.containerNotFound {
+/********************************* NOT FOUND *********************************/
+.container-not-found {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -393,18 +383,18 @@ footer {
     text-align: center;
 }
 
-.titleNotFound {
+.title-not-found {
     font-size: 6em;
     color: var(--color-secundario);
     margin-bottom: 1em;
 }
 
-.messageNotFound {
+.message-not-found {
     font-size: 1.5em;
     margin-bottom: 2em;
 }
 
-.buttonNotFound {
+.boton-not-found {
     background-color: var(--color-primario);
     color: white;
     padding: 0.75em 1.5em;
@@ -413,16 +403,18 @@ footer {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.buttonNotFound:hover {
+.boton-not-found:hover {
     background-color: var(--color-secundario);
     transform: scale(1.1);
     font-weight: 700;
 }
 /********************************* NOT FOUND *********************************/
+/********************************* NOT FOUND *********************************/
 
 
 /********************************* NO INTERNET *********************************/
-.containerNoInternet {
+/********************************* NO INTERNET *********************************/
+.container-no-internet {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -432,25 +424,27 @@ footer {
     text-align: center;
 }
 
-.titleNoInternet {
+.title-no-internet {
     font-size: 3em;
     color: var(--color-secundario);
     margin-bottom: 1em;
 }
-.messageNoInternet {
+.message-no-internet {
     font-size: 1.5em;
     margin-bottom: 2em;
 }
 
-.imageNoInternet {
+.image-no-internet {
     width: 30vh;
     height: 30vh;
     margin-top: 20px;
 }
 /********************************* NO INTERNET *********************************/
+/********************************* NO INTERNET *********************************/
 
 /********************************* WHATSAPP POPUP *********************************/
-.WhatsappPopUp {
+/********************************* WHATSAPP POPUP *********************************/
+.whatsapp-popup {
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -468,7 +462,7 @@ footer {
 
 
 
-.iconWhatsappPopUp {
+.icon-whatsapp-popup {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -530,11 +524,11 @@ footer {
     }
 }
 
-.iconWhatsappPopUp:hover {
+.icon-whatsapp-popup:hover {
     background-color: #128c7e;
 }
 /* Estilo para el mensaje */
-.iconWhatsappPopUp::after {
+.icon-whatsapp-popup::after {
     content: "Ir a WhatsApp";  /* Mensaje que aparecerá */
     position: absolute;
     text-align: center;
@@ -554,14 +548,17 @@ footer {
 }
 
 /* Mostrar el mensaje al hacer hover */
-.iconWhatsappPopUp:hover::after {
+.icon-whatsapp-popup:hover::after {
     opacity: 1;
     visibility: visible;
 }
 /********************************* WHATSAPP POPUP *********************************/
+/********************************* WHATSAPP POPUP *********************************/
+
 
 /********************************* CONTACTO *********************************/
-.contactPage {
+/********************************* CONTACTO *********************************/
+.contact-page {
     background-image: url('assets/backgroundContacto.png'); 
     background-size: cover; 
     background-position: center; 
@@ -576,7 +573,7 @@ footer {
     position: relative; /* Esto es importante para el pseudo-elemento */
 }
 
-.contactPage::before {
+.contact-page::before {
     content: "";
     position: absolute;
     top: 0;
@@ -587,7 +584,7 @@ footer {
     z-index: 1;
 }
 
-.contactInfo {
+.contact-info {
     margin: 1em auto; 
     padding: 20px 40px;
     width: 100%; 
@@ -599,19 +596,19 @@ footer {
     z-index: 2; 
 }
 
-.contactInfo h2 {
+.contact-info h2 {
     font-size: 2.2em;
     text-align: center;
     color: var(--color-secundario);
 }
 
-.contactInfo p {
+.contact-info p {
     text-align: center;
     color: var(--color-secundario);
 
 }
 
-.adicionalContact {
+.adicional-contact {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
@@ -619,15 +616,15 @@ footer {
 }
 
 /* > indica el elemento inmediato dentro de la clase */
-.adicionalContact > div { 
+.adicional-contact > div { 
     flex: 1; 
     min-width: 200px; 
-    border-right: 1.5px solid rgba(0, 0, 0, 0.2); /* Borde entre los divs */
-    padding-right: 1.5em; /* Asegura que el borde no quede pegado al contenido */
+    border-right: 1.5px solid rgba(0, 0, 0, 0.2);
+    padding-right: 1.5em;
 }
 
-.adicionalContact > div:last-child {
-    border-right: none; /* El último div no tendrá borde */
+.adicional-contact > div:last-child {
+    border-right: none;
     padding-right: 0;
 }
 
@@ -665,7 +662,7 @@ footer {
     color: white; 
 }
 
-.instagramInfoContact {
+.instagram-info-contact {
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -683,31 +680,31 @@ footer {
     transition: all 0.3s ease-in-out; 
 }
 
-.instagramInfoContact:hover {
+.instagram-info-contact:hover {
     background-color: var(--color-secundario); 
     color: white; 
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); 
     transform: translateY(-4px); 
 }
 
-.instagramInfoContact a {
+.instagram-info-contact a {
     text-decoration: none; 
     color: inherit; 
-    font-weight: bold;
-    transition: color 0.3s ease-in-out; 
+    transition: color 0.3s ease-in-out, font-weight 0.3s ease; 
 }
 
-.instagramInfoContact:hover a {
+.instagram-info-contact:hover a {
     color: white; 
+    font-weight: 700;
 }
 
-.instagramInfoContact .fa-instagram {
+.instagram-info-contact .fa-instagram {
     font-size: 1.5em; 
     color: inherit; 
     transition: color 0.3s ease-in-out;
 }
 
-.instagramInfoContact:hover .fa-instagram {
+.instagram-info-contact:hover .fa-instagram {
     color: white; 
 }
 
@@ -716,12 +713,12 @@ footer {
         display: none;
     }
     
-    .adicionalContact {
+    .adicional-contact {
         flex-direction: column;
         align-items: center;
     }
 
-    .adicionalContact > div {
+    .adicional-contact > div {
         padding-right: 0;
         margin-bottom: 1em;
         border-right: none; /* El borde se elimina cuando está en columna */
@@ -731,7 +728,7 @@ footer {
         
     }
 
-    .adicionalContact > div:last-child {
+    .adicional-contact > div:last-child {
         border-bottom: 0;
         padding-bottom: 0;
     }
@@ -756,19 +753,19 @@ footer {
         cursor: pointer;
     }
 
-    .telfContact {
+    .telf-contact {
         display: inline-block
     }
     
-    .emailContact, .direccContact {
+    .email-contact, .direccion-contact {
         display: none;
         visibility: hidden;
         opacity: 0;
         transition: opacity 0.3s ease;
     }
 
-    .info-item:hover .emailContact,
-    .info-item:hover .direccContact {
+    .info-item:hover .email-contact,
+    .info-item:hover .direccion-contact {
         display: inline; /* Mostrar el texto */
         visibility: visible;
         opacity: 1;
@@ -782,9 +779,12 @@ footer {
 
 }
 /********************************* CONTACTO *********************************/
+/********************************* CONTACTO *********************************/
+
 
 /********************************* INICIO *********************************/
-.homePage {
+/********************************* INICIO *********************************/
+.home-page {
     min-height: 100vh; 
     display: flex;
     justify-content: center;
@@ -794,13 +794,13 @@ footer {
     position: relative;
 }
 
-.contentWrapper {
+.content-wrapper {
     margin: 0 auto;
     text-align: center;
 }
 
 /* Sección 1: Overview */
-.firstSectionHome {
+.first-section-home-page {
     background-image: url('assets/firstSectionHome.png'); 
     background-size: cover;
     background-position: center;
@@ -817,7 +817,7 @@ footer {
     color: white;
 }
 
-.firstSectionHome::before {
+.first-section-home-page::before {
     content: "";
     position: absolute;
     top: 0;
@@ -828,7 +828,7 @@ footer {
     z-index: 0;
 }
 
-.firstSectionHome h1 {
+.first-section-home-page h1 {
     font-size: 4rem; /* Tamaño adaptable */
     line-height: 100%;
     margin-bottom: 2rem;
@@ -838,7 +838,7 @@ footer {
     text-align: center; /* Asegura que el texto se centre */
 }
 
-.firstSectionHome span {
+.first-section-home-page span {
     font-size: 2rem; /* Tamaño más pequeño en pantallas pequeñas */
     font-weight: 600;
     position: relative;
@@ -851,7 +851,7 @@ footer {
     text-align: center; /* Centra el texto */
 }
 
-.firstSectionHome span:hover {
+.first-section-home-page span:hover {
     transform: scale(1.1); /* Escala suave en hover */
     text-shadow: 0px 0px 20px black; /* Sombra llamativa */
 }
@@ -899,7 +899,7 @@ footer {
     }
 }
 
-.firstSectionHome span::before {
+.first-section-home-page span::before {
     content: "Materiales y equipos médicos de calidad"; 
     animation: fadeText 16s infinite;
 }
@@ -909,25 +909,25 @@ footer {
     .homePage{
         margin-top: 60px;
     }
-    .firstSectionHome {
+    .first-section-home-page {
         padding: 5rem 2rem; /* Reduce aún más el padding */
     }
-    .firstSectionHome h1 {
+    .first-section-home-page h1 {
         font-size: 2.5rem; /* Más pequeño para pantallas medianas */
     }
-    .firstSectionHome span {
+    .first-section-home-page span {
         font-size: 1.5rem; /* Texto más pequeño */
     }
 }
 
 @media (max-width: 480px) {
-    .firstSectionHome {
+    .first-section-home-page {
         padding: 4rem 1rem; /* Ajuste mínimo para pantallas pequeñas */
     }
-    .firstSectionHome h1 {
+    .first-section-home-page h1 {
         font-size: 2rem; /* Título compacto */
     }
-    .firstSectionHome span {
+    .first-section-home-page span {
         font-size: 1.2rem; /* Texto más pequeño pero legible */
     }
 }
@@ -935,7 +935,7 @@ footer {
 
 
 /* Sección 2: Características destacables */
-.secondSectionHome {
+.second-section-home-page {
     background-image: url('assets/secondSectionHome.jpg'); 
     background-size: cover;
     background-position: center;
@@ -950,7 +950,7 @@ footer {
     z-index: 1; /* Capa base del contenido */
 }
 
-.secondSectionHome::before {
+.second-section-home-page::before {
     content: "";
     position: absolute;
     top: 0;
@@ -961,7 +961,7 @@ footer {
     z-index: -1; /* Envía el fondo detrás del contenido */
 }
 
-.secondSectionHome h1 {
+.second-section-home-page h1 {
     text-transform: uppercase;
     font-size: 2.5rem;
     line-height: 100%;
@@ -972,7 +972,7 @@ footer {
     z-index: 1;
 }
 
-.caracteristicasHomePage {
+.caracteristicas-home-page {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajuste responsivo */
     gap: 2rem; /* Reduce el espacio entre las tarjetas */
@@ -983,7 +983,7 @@ footer {
     padding: 20px 50px 40px;
 }
 
-.caracteristicaItem {
+.caracteristicas-item {
     background: var(--color-primario);
     border-radius: 1rem;
     padding: 2rem;
@@ -999,14 +999,14 @@ footer {
     transition: transform 0.5s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-.caracteristicaItem:hover {
+.caracteristicas-item:hover {
     background: white;
     transform: translateY(-0.5rem);
     
 }
 
 /* Tamaño de los iconos */
-.iconWrapper {
+.icon-wrapper {
     position: relative;
     width: 7rem;
     height: 7rem;
@@ -1015,7 +1015,7 @@ footer {
     z-index: 1;
 }
 
-.iconFront, .iconBack {
+.icon-front, .icon-back {
     position: absolute;
     top: 0;
     left: 0;
@@ -1029,14 +1029,14 @@ footer {
     transition: transform 0.6s ease, box-shadow 0.3s ease;
 }
 
-.iconFront {
+.icon-front {
     color: var(--color-primario);
     font-size: 3.5rem; /* Aumentado el tamaño del ícono */
     box-shadow: inset 0 0 0.7rem rgba(0, 0, 0, 0.1); /* Efecto incrustado */
     background-color: white;
 }
 
-.iconBack {
+.icon-back {
     background: var(--color-primario);
     color: white;
     font-size: 3.5rem; /* Aumentado el tamaño del ícono */
@@ -1044,17 +1044,17 @@ footer {
     box-shadow: 0 0rem 0rem rgba(0, 0, 0, 0.2); /* Efecto sobresalido */
 }
 
-.caracteristicaItem:hover .iconFront {
+.caracteristicas-item:hover .icon-front {
     transform: rotateY(180deg);
     box-shadow: inset 0 0 0.7rem rgba(0, 0, 0, 0.1); /* Aumentar el efecto incrustado al hacer hover */
 }
 
-.caracteristicaItem:hover .iconBack {
+.caracteristicas-item:hover .icon-back {
     transform: rotateY(360deg);
     box-shadow: 0.2rem 0.7rem 0.7rem rgba(0, 0, 0, 0.3); /* Efecto sobresalido */
 }
 
-.caracteristicaItem h3 {
+.caracteristicas-item h3 {
     font-size: 2rem;
     color: white;
     margin-bottom: 1rem;
@@ -1063,12 +1063,12 @@ footer {
     z-index: 1;
 }
 
-.caracteristicaItem:hover h3 {
+.caracteristicas-item:hover h3 {
     color: var(--color-primario);
 }
 
 /* Estado inicial del párrafo */
-.caracteristicaItem p {
+.caracteristicas-item p {
     opacity: 0; 
     max-height: 0; 
     visibility: hidden; 
@@ -1082,7 +1082,7 @@ footer {
 }
 
 /* Cuando se hace hover en la tarjeta */
-.caracteristicaItem:hover p {
+.caracteristicas-item:hover p {
     opacity: 1; 
     max-height: 200px; 
     visibility: visible; 
@@ -1096,7 +1096,7 @@ footer {
 }
 
 
-.botonContactoHome {
+.boton-contacto-home {
     font-size: 1.4rem;
     margin-top: 1em;
     padding: 0.5em 1em;
@@ -1108,19 +1108,19 @@ footer {
     transition: font-weight 0.1s ease;
 }
 
-.caracteristicaItem:hover .botonContactoHome{
+.caracteristicas-item:hover .boton-contacto-home{
     box-shadow: inset 0 0 0.7rem rgba(0, 0, 0, 0.1); /* Efecto incrustado */
 }
 
-.botonContactoHome:hover {
+.boton-contacto-home:hover {
     font-weight: 600;
 }
 
-.contentWrapper > p {
+.content-wrapper > p {
     font-size: 1.5rem;
 }
 
-.botonANosotros {
+.boton-nosotros-home {
     display: inline-block;
     font-size: 1.4rem;
     margin-top: 1em;
@@ -1133,7 +1133,7 @@ footer {
     transition: background 0.3s ease, transform 0.3s ease, font-weight 0.3s ease;
 }
 
-.botonANosotros:hover {
+.boton-nosotros-home:hover {
     font-weight: 500;
     background: var(--color-secundario);
     transform: scale(1.1);
@@ -1141,12 +1141,12 @@ footer {
 
 
 /* Sección 3: Catálogo */
-.thirdSectionHome {
+.third-section-home-page {
     background: #ffffff;
     padding: 50px 20px;
 }
 
-.thirdSectionHome h1 {
+.third-section-home-page h1 {
     font-size: 2.5rem;
     color: var(--color-primario);
     text-align: center;
@@ -1154,7 +1154,7 @@ footer {
     font-weight: 600;
 }
 
-.thirdSectionHome h1 a {
+.third-section-home-page h1 a {
     color: var(--color-primario); 
     text-decoration: none; 
     font-weight: bold; 
@@ -1163,7 +1163,7 @@ footer {
     transition: color 0.3s ease; 
 }
 
-.thirdSectionHome h1 a::after {
+.third-section-home-page h1 a::after {
     content: ""; 
     position: absolute;
     left: 0;
@@ -1177,11 +1177,11 @@ footer {
     
 }
 
-.thirdSectionHome h1 a:hover::after {
+.third-section-home-page h1 a:hover::after {
     transform: scaleX(1); 
 }
 
-.thirdSectionHome h1 a:hover{
+.third-section-home-page h1 a:hover{
     animation: shakeBottom 1.5s ease 0s 1 normal forwards;
 }
 @keyframes shakeBottom {
@@ -1216,7 +1216,7 @@ footer {
 	}
 }
 
-.catalogContainer {
+.catalog-container {
     display: grid; 
     grid-template-columns: repeat(4, 1fr); 
     justify-items: center; 
@@ -1227,171 +1227,117 @@ footer {
 }
 
 @media (max-width: 1080px) {
-    .catalogContainer {
+    .catalog-container {
         grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 600px) {
-    .catalogContainer {
+    .catalog-container {
         grid-template-columns: repeat(1, 1fr); 
     }
 }
 
 
 
-.fourthSectionHome {
+.fourth-section-home-page {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 80vh; 
     padding: 20px;
-    gap: 60px;
+    background-color: var(--color-primario);
 }
 
-
-.imageContainer {
-    flex: 1;
-    overflow: hidden;
-    position: relative;
-    width: 50%; 
-    height: 100%;
-    
-}
-
-.zoomImage {
-    width: 100%;
-    height: 100%;
-    background-image: url('assets/antibacterial.png'); 
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.5s ease;
-    border-radius: 10rem;
-    border-top-right-radius: 0;
-    
-}
-
-
-.contentContainer {
+.content-container {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; 
-    padding-left: 20px;
-    text-align: left;
-    color: var(--color-primario);
+    align-items: center; 
+    padding: 10rem;
+    text-align: center;
+    color: white;
 }
 
-.contentContainer h1 {
+.content-container h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.contentContainer p {
+.content-container p {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
-
-.ctaButton {
+.fourth-section-boton-contacto {
     display: inline-block;
-    padding: 12px 24px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
+    font-size: 1.4rem;
+    margin-top: 1em;
+    padding: 1em 2em;
+    background-color: white;
+    color: var(--color-primario);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, font-weight 0.3s ease;
 }
 
-.ctaButton:hover {
-    background-color: #0056b3;
+.fourth-section-boton-contacto:hover {
+    font-weight: 500;
+    transform: scale(1.1);
 }
-
 
 @media (max-width: 1024px) {
-    .fourthSectionHome {
+    .fourth-section-home-page {
         flex-direction: column; 
         gap: 0px;
     }
 
-    .imageContainer {
-        width: 100%; 
-        height: 50vh; 
-    }
-    .zoomImage{
-        border-radius: 0;
-    }
-
-    .contentContainer {
+    .content-container {
         padding-left: 10px;
         padding-right: 10px;
     }
 
-    .contentContainer h1 {
+    .content-container h1 {
         font-size: 2.5rem;
     }
 
-    .contentContainer p {
+    .content-container p {
         font-size: 1.2rem;
-    }
-
-    .ctaButton {
-        padding: 10px 20px;
-        font-size: 1rem;
     }
 }
 
 @media (max-width: 768px) {
-    .imageContainer {
-        height: 40vh;
-    }
-
-    .contentContainer h1 {
+    .content-container h1 {
         font-size: 2rem;
     }
 
-    .contentContainer p {
+    .content-container p {
         font-size: 1rem;
-    }
-
-    .ctaButton {
-        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
-    .imageContainer {
-        height: 30vh;
-    }
-
-    .contentContainer h1 {
+    .content-container h1 {
         font-size: 1.5rem;
     }
 
-    .contentContainer p {
+    .content-container p {
         font-size: 0.9rem;
-    }
-
-    .ctaButton {
-        font-size: 0.8rem;
-        padding: 8px 16px;
     }
 }
 
-
-
-.firstSectionHome, .secondSectionHome, .thirdSectionHome, .fourthSectionHome {
+.first-section-home-page, .second-section-home-page, .third-section-home-page, .fourth-section-home-page {
     width: 100%;
 }
 
 /********************************* INICIO *********************************/
+/********************************* INICIO *********************************/
 
 /********************************* FLIP CARD *********************************/
-.flipCard {
+.flip-card {
     position: relative;
     width: 100%;
     min-width: 260px;
@@ -1405,7 +1351,7 @@ footer {
     margin-top: 40px;
 }
 
-.cardImg {
+.card-img {
     width: 100%;
     height: 100%;
     object-fit: cover; 
@@ -1413,12 +1359,12 @@ footer {
     transition: transform 0.3s ease-in-out; 
 }
 
-.flipCard:hover .cardImg {
+.flip-card:hover .card-img {
     transform: scale(1.1); 
 }
 
-.cardBody {
-    position: absolute; /* Para que se posicione relativo a .flipCard */
+.card-body {
+    position: absolute; /* Para que se posicione relativo a .flip-card */
     top: 0;
     right: -100%; /* Oculto inicialmente */
     width: 100%;
@@ -1436,11 +1382,11 @@ footer {
 }
 
 /* Mueve el cuerpo hacia su posición al hacer hover */
-.flipCard:hover .cardBody {
+.flip-card:hover .card-body {
     right: 0; /* Se desliza a la posición visible */
 }
 
-.cardBody h1 {
+.card-body h1 {
     font-size: 2rem; 
     font-weight: 500;
     margin: 0;
@@ -1448,7 +1394,7 @@ footer {
     color: white;
 }
 
-.cardInfo {
+.card-info {
     font-size: 1rem;
     line-height: 1.5rem;
     margin: 20px 0;
@@ -1456,7 +1402,7 @@ footer {
     text-align: center;
 }
 
-.cardButton {
+.card-boton {
     display: inline-block;
     font-size: 1rem;
     margin-top: 1em;
@@ -1469,14 +1415,16 @@ footer {
     padding: 0.8rem 1.5rem;
 }
 
-.cardButton:hover {
+.card-boton:hover {
     background-color: var(--color-secundario);
     transform: scale(1.1); 
 }
 /********************************* FLIP CARD *********************************/
+/********************************* FLIP CARD *********************************/
+
 
 /********************************* NOSOTROS *********************************/
-
+/********************************* NOSOTROS *********************************/
 .about-us {
     min-height: 100vh; 
     display: flex;
@@ -1610,7 +1558,6 @@ footer {
     
 }
 
-
 .fourth-section-about-us {
     width: 100%;
     height:fit-content;
@@ -1691,7 +1638,6 @@ footer {
 .texto-explora-catalogo a:hover{
     animation: shakeBottom 1.5s ease 0s 1 normal forwards;
 }
-
-
+/********************************* NOSOTROS *********************************/
 /********************************* NOSOTROS *********************************/
 

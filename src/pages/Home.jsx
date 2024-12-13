@@ -38,75 +38,74 @@ const Home = () => {
 
     return (
         <>
-            <div className="homePage">
+            <div className="home-page">
                 {/* Primera Sección: Overview */}
-                <section className="firstSectionHome">
-                    <div className="contentWrapper">
+                <section className="first-section-home-page">
+                    <div className="content-wrapper">
                         <h1>HMD Medical Venezuela</h1>
                         <span></span>
                     </div>
                 </section>
 
                 {/* Segunda Sección: Características destacables */}
-                <section className="secondSectionHome">
-                    <div className="contentWrapper">
-                        <div className="titleWrapper">
-                            <h1>¿Por qué elegirnos?</h1>
-                        </div>
-                        <div className="caracteristicasHomePage">
-                            <div className="caracteristicaItem">
-                                <div className="iconWrapper">
-                                    <div className="iconFront">
+                <section className="second-section-home-page">
+                    <div className="content-wrapper">
+                        <h1>¿Por qué elegirnos?</h1>
+
+                        <div className="caracteristicas-home-page">
+                            <div className="caracteristicas-item">
+                                <div className="icon-wrapper">
+                                    <div className="icon-front">
                                         <FaTruckFast />
                                     </div>
-                                    <div className="iconBack">
+                                    <div className="icon-back">
                                         <FaTruckFast />
                                     </div>
                                 </div>
                                 <h3>Entrega<br/>Inmediata</h3>
                                 <p>Recibe tus productos sin demoras.</p>
-                                <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="botonContactoHome">Contáctanos</a>
+                                <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="boton-contacto-home">Contáctanos</a>
                             </div>
 
-                            <div className="caracteristicaItem">
-                                <div className="iconWrapper">
-                                    <div className="iconFront">
+                            <div className="caracteristicas-item">
+                                <div className="icon-wrapper">
+                                    <div className="icon-front">
                                         <RiCustomerService2Fill />
                                     </div>
-                                    <div className="iconBack">
+                                    <div className="icon-back">
                                         <RiCustomerService2Fill />
                                     </div>
                                 </div>
                                 <h3>Atención Personalizada</h3>
                                 <p>Estamos contigo en cada paso.</p>
-                                <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="botonContactoHome">Contáctanos</a>
+                                <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="boton-contacto-home">Contáctanos</a>
                             </div>
 
-                            <div className="caracteristicaItem">
-                                <div className="iconWrapper">
-                                    <div className="iconFront">
+                            <div className="caracteristicas-item">
+                                <div className="icon-wrapper">
+                                    <div className="icon-front">
                                         <TbPigMoney />
                                     </div>
-                                    <div className="iconBack">
+                                    <div className="icon-back">
                                         <TbPigMoney />
                                     </div>
                                 </div>
                                 <h3>Precios Competitivos</h3>
                                 <p>La mejor calidad al mejor precio.</p>
-                                <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="botonContactoHome">Contáctanos</a>
+                                <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="boton-contacto-home">Contáctanos</a>
                             </div>
                         </div>
 
                         <p>Conoce más sobre lo que nos hace únicos.</p>
-                        <a href="/us" className="botonANosotros">Descubre más</a>
+                        <a href="/us" className="boton-nosotros-home">Descubre más</a>
                     </div>
                 </section>
 
                 {/* Tercera Sección: Acceso al catálogo */}
-                <section className="thirdSectionHome">
-                    <div className="contentWrapper">
+                <section className="third-section-home-page">
+                    <div className="content-wrapper">
                         <h1>Explora nuestro <a href="">catálogo</a></h1>
-                        <div className="catalogContainer">
+                        <div className="catalog-container">
                             {categories.map((category, index) => (
                                 <FlipCard
                                     key={index}
@@ -121,19 +120,14 @@ const Home = () => {
                 </section>
 
                 {/* Cuarta Sección: Call to Action */}
-                <section className="fourthSectionHome">
-                    <div className="imageContainer">
-                        <div className="zoomImage"></div>
-                    </div>
-                    <div className="contentContainer">
-                        <h1>Contáctanos hoy</h1>
-                        <p>Haz tu pedido ahora y garantiza los mejores productos para tu institución o negocio.</p>
-                        <a href="/contacto" className="botonANosotros">Contáctanos</a>
+                <section className="fourth-section-home-page">
+                    <div className="content-container">
+                        <h1>Suministros Esenciales, Cuidado Excepcional</h1>
+                        <p><strong>Enfocados, confiables y eficientes.</strong><br/>Nuestra selección cuidadosamente elaborada de suministros médicos está aquí para apoyarte: ofrecemos productos de confianza con un servicio inigualable.</p>
+                        <p>Trabajemos juntos — ¡contáctanos hoy mismo!</p>
+                        <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" className="fourth-section-boton-contacto">Contáctanos</a>
                     </div>
                 </section>
-
-
-
 
             </div>
 

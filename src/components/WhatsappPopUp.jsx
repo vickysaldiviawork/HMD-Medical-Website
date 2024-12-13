@@ -4,7 +4,7 @@ import "../global.css";
 const WhatsappPopUp = () => {
     return(
         <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0"
-            className="iconWhatsappPopUp"
+            className="icon-whatsapp-popup"
             target="_blank"
             rel="noopener noreferrer"
         >

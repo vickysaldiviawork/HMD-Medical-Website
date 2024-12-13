@@ -10,11 +10,11 @@ export const NavBar = () => {
     };
 
     return (
-        <header className='headerNavBar'>
+        <header className='header-navbar'>
             
-                <a href="/" className='logoNavBar'>HMD Medical</a>
+                <a href="/" className='logo-navbar'>HMD Medical</a>
 
-                <nav className={`navbarNavBar ${menuOpen ? 'open' : ''}`}>
+                <nav className={`links-navbar ${menuOpen ? 'open' : ''}`}>
                     <a href="/">Inicio</a>
                     <a href="/contact">Contacto</a>
                     <a href="/us">Nosotros</a>
@@ -22,7 +22,7 @@ export const NavBar = () => {
 
             
             {/* Icono de menú, que al hacer clic alterna el estado del menú */}
-            <div className="menuBurgerNavBar" onClick={toggleMenu}>
+            <div className="menu-burger-navbar" onClick={toggleMenu}>
                 <TiThMenu />
             </div>
         </header>
