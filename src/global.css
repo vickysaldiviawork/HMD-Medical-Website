@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -12,29 +13,6 @@
 }
 
 
-.poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.poppins-medium {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.poppins-regular-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.poppins-medium-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-}
 
 a {
     text-decoration: none;
@@ -1496,3 +1474,224 @@ footer {
     transform: scale(1.1); 
 }
 /********************************* FLIP CARD *********************************/
+
+/********************************* NOSOTROS *********************************/
+
+.about-us {
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 70px;
+}
+
+.first-section-about-us {
+    background-image: url('assets/firstSectionHome.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 5rem;
+    flex-direction: column;
+    position: relative;
+    color: white;
+}
+
+.first-section-about-us::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    z-index: 0;
+}
+
+.first-section-about-us h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    line-height: 100%;
+    z-index: 1; 
+    position: relative;
+    font-weight: 600;
+    text-align: center; /* Asegura que el texto se centre */
+}
+
+.second-section-about-us {
+    width: 100%;
+    height:fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.content-second-section-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 50px;
+    text-align: center;
+    color: white;
+    background: var(--color-primario);
+    transition: width 0.3s ease; /* Transición suave en el ancho */
+}
+
+.content-second-section-about h1 {
+    margin-bottom: 1.5rem;
+}
+
+.img-second-section-about {
+    background-image: url('assets/noImageAvailable.png');
+    background-size: cover;
+    background-position: center;
+    transition: width 0.3s ease; /* Transición suave en el ancho */
+    width: 50%; /* Ajustamos al 50% inicialmente */
+}
+
+.content-second-section-about:hover {
+    width: 70%; /* Aumenta el ancho del contenido */
+}
+
+.img-second-section-about:hover {
+    width: 70%; /* Disminuye el ancho de la imagen */
+}
+
+.third-section-about-us {
+    margin: 3rem;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 4rem;
+    color: var(--color-primario);
+    padding: 50px 100px;
+    flex-wrap: nowrap; 
+}
+
+.mision, .vision, .valores {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    align-items: center; 
+}
+
+.mision h1, .vision h1, .valores h1 {
+    font-size: 2.5rem;
+    align-self: flex-start; 
+    text-align: left; 
+    margin-bottom: 0.5rem;
+}
+
+.mision p, .vision p, .valores p {
+    text-align: justify; 
+}
+
+
+@media screen and (max-width: 1024px) {
+    .third-section-about-us {
+        flex-direction: column; 
+        gap: 2rem; 
+        padding: 20px; 
+    }
+
+    .mision, .vision, .valores {
+        width: 100%; 
+    }
+
+    
+}
+
+
+.fourth-section-about-us {
+    width: 100%;
+    height:fit-content;
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-primario);
+    gap: 20px;
+    padding: 50px;
+    padding-right: 0;
+}
+
+.fourth-section-about-us h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.img-fourth-section-about {
+    background-image: url('assets/noImageAvailable.png');
+    background-size: cover;
+    background-position: center;
+    width: 40%;
+    height: auto;
+    border-top-left-radius: 50rem;
+    border-bottom-left-radius: 50rem;
+
+}
+
+.content-fourth-section-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    padding: 50px;
+    text-align: justify;
+    transition: width 0.3s ease; /* Transición suave en el ancho */
+}
+
+
+.texto-explora-catalogo {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    text-align: center;
+
+    font-weight: 600;
+}
+
+.texto-explora-catalogo a {
+    color: var(--color-primario); 
+    text-decoration: none; 
+    font-weight: bold; 
+    position: relative; 
+    display: inline-block; 
+    transition: color 0.3s ease; 
+}
+
+.texto-explora-catalogo a::after {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 100%; 
+    height: 3px; 
+    background: var(--color-secundario); 
+    transform: scaleX(0); 
+    transform-origin: left; 
+    transition: transform 0.3s ease; 
+    
+}
+
+.texto-explora-catalogo a:hover::after {
+    transform: scaleX(1); 
+}
+
+.texto-explora-catalogo a:hover{
+    animation: shakeBottom 1.5s ease 0s 1 normal forwards;
+}
+
+
+/********************************* NOSOTROS *********************************/
+
