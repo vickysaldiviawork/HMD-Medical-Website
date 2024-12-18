@@ -1,4 +1,6 @@
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram } from 'react-icons/fa';  // Icons for the contact details
+import { Link } from "react-router-dom";
+
 
 const Contact = () => {
     const openWhatsApp = () => {
@@ -44,7 +46,7 @@ const Contact = () => {
                             <h2>Conócenos</h2>
                             <p>¡Descubre <b>quiénes somos</b>!</p>
                             <div className="instagram-info-contact">
-                                <a href="/us">Nosotros</a>
+                                <Link to="/us">Nosotros</Link>
                             </div>
                         </div>
 

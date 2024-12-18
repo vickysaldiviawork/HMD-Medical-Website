@@ -64,7 +64,7 @@ main {
     gap: 1.875em; /* Espacio entre los enlaces */
 }
 
-.links-navbar a {
+.links-navbar .links {
     position: relative;
     font-size: 1.125em;
     color: var(--color-primario);
@@ -73,12 +73,12 @@ main {
     border-radius: 4px;
 }
 
-.links-navbar a:hover {
+.links-navbar .links:hover {
     font-weight: bolder;
     font-size: 1.1875em;
 }
 
-.links-navbar a::before {
+.links-navbar .links::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -89,7 +89,7 @@ main {
     transition: width 0.3s ease;
 }
 
-.links-navbar a:hover::before {
+.links-navbar .links:hover::before {
     width: 100%;
 }
 
@@ -120,13 +120,13 @@ main {
     .links-navbar.open {
         display: flex;
     }
-    .links-navbar a {
+    .links-navbar .links {
         padding: 10px;
     }
-    .links-navbar a::before {
+    .links-navbar .links::before {
         display: none; /* Desactiva la animación de línea */
     }
-    .links-navbar a:hover {
+    .links-navbar .links:hover {
         background-color: rgba(0, 24, 121, 0.7);
     }
 }

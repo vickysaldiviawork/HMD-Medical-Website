@@ -4,6 +4,8 @@ import { FaInstagram } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { IoIosSearch } from "react-icons/io";
 
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
     return (
@@ -37,9 +39,9 @@ const Footer = () => {
                 <div className="paginas-footer">
                     <h3><IoIosSearch /> Navegación</h3>
                     <ul>
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/contact">Contacto</a></li>
-                        <li><a href="/us">Nosotros</a></li>
+                        <li><Link to="/">Inicio</Link></li>
+                        <li><Link to="/contact">Contacto</Link></li>
+                        <li><Link to="/us">Nosotros</Link></li>
                     </ul>
                 </div>
 

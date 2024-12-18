@@ -9,6 +9,8 @@ import EcosonogramaImg from "../assets/ecosonograma.png";
 import DesinfectanteImg from "../assets/desinfectante.png";
 import MuestrasImg from "../assets/muestras.png";
 
+import { Link } from "react-router-dom";
+
 
 const Home = () => {
 
@@ -97,7 +99,7 @@ const Home = () => {
                         </div>
 
                         <p>Conoce más sobre lo que nos hace únicos.</p>
-                        <a href="/us" className="boton-nosotros-home">Descubre más</a>
+                        <Link to="/us" className="boton-nosotros-home">Descubre más</Link>
                     </div>
                 </section>
 
