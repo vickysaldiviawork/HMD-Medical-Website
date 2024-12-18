@@ -14,7 +14,7 @@ export const NavBar = () => {
     return (
         <header className='header-navbar'>
             
-                <a href="/" className='logo-navbar'>HMD Medical</a>
+                <Link to="/" className='logo-navbar'>HMD Medical</Link>
 
                 <nav className={`links-navbar ${menuOpen ? 'open' : ''}`}>
                     <Link to="/" className="links">Inicio</Link>
