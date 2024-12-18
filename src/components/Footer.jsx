@@ -53,7 +53,7 @@ const Footer = () => {
                 </div>
 
                 <div className="instagram-info">
-                    <FaInstagram /> <a href="https://www.instagram.com/hmdmedicalvzla/">HMD Medical Vzla</a>
+                    <FaInstagram /> <a href="https://www.instagram.com/hmdmedicalvzla/" target="_blank">HMD Medical Vzla</a>
                 </div>
             </div>
         </footer>

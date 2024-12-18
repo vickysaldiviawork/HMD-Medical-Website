@@ -125,7 +125,7 @@ const Home = () => {
                         <h1>Suministros Esenciales, Cuidado Excepcional</h1>
                         <p><strong>Enfocados, confiables y eficientes.</strong><br/>Nuestra selección cuidadosamente elaborada de suministros médicos está aquí para apoyarte: ofrecemos productos de confianza con un servicio inigualable.</p>
                         <p>Trabajemos juntos — ¡contáctanos hoy mismo!</p>
-                        <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" className="fourth-section-boton-contacto">Contáctanos</a>
+                        <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="fourth-section-boton-contacto">Contáctanos</a>
                     </div>
                 </section>
 

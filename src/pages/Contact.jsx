@@ -36,7 +36,7 @@ const Contact = () => {
                             <h2>Redes Sociales</h2>
                             <p>¡Encuéntranos en las Redes!</p>
                             <div className="instagram-info-contact">
-                                <FaInstagram /> <a href="https://www.instagram.com/hmdmedicalvzla/">HMD Medical Vzla</a>
+                                <FaInstagram /> <a href="https://www.instagram.com/hmdmedicalvzla/" target='_blank'>HMD Medical Vzla</a>
                             </div>
                         </div>
 
