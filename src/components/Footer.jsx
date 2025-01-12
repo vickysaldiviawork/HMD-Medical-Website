@@ -4,6 +4,8 @@ import { FaInstagram } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { IoIosSearch } from "react-icons/io";
 
+import Logo from "../assets/HMDLogo.png";
+
 import { Link } from "react-router-dom";
 
 
@@ -11,11 +13,12 @@ const Footer = () => {
     return (
         <footer>
             <div className="top-footer">
-                <img src="" alt="logoHMDMedical" />
+                <img src={Logo} alt="logoHMDMedical" className="logo-img" />
                 <p className="text-top-footer">
                     Somos una empresa dedicada a la fabricación, distribución y comercialización de productos médicos en Venezuela.
                 </p>
             </div>
+
 
             <div className="container-footer">
                 

@@ -64,7 +64,7 @@ const Home = () => {
                                         <FaTruckFast />
                                     </div>
                                 </div>
-                                <h3>Entrega<br/>Inmediata</h3>
+                                <h3>Entrega Inmediata</h3>
                                 <p>Recibe tus productos sin demoras.</p>
                                 <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="boton-contacto-home">Contáctanos</a>
                             </div>
@@ -106,7 +106,7 @@ const Home = () => {
                 {/* Tercera Sección: Acceso al catálogo */}
                 <section className="third-section-home-page">
                     <div className="content-wrapper">
-                        <h1>Explora nuestro <a href="">catálogo</a></h1>
+                        <h1>Explora nuestro <a href="https://drive.google.com/file/d/15NVln3OKnJu7ioEm_YC2-_84eFgsPu1C/view?usp=sharing" target="_blank">catálogo</a></h1>
                         <div className="catalog-container">
                             {categories.map((category, index) => (
                                 <FlipCard
