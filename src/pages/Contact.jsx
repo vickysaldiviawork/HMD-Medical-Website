@@ -22,7 +22,7 @@ const Contact = () => {
 
                     <div className="info-item">
                         <FaEnvelope className="contact-icon" />
-                        <span className='emailContact'><b>Email:</b> hmdventas@hmdmedica.net</span>
+                        <span className='emailContact'><b>Email:</b> hmdventas@hmdmedical.net</span>
                     </div>
 
                     <div className="info-item">

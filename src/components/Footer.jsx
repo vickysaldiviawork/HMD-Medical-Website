@@ -32,8 +32,8 @@ const Footer = () => {
                     <h3><RiCustomerService2Fill /> Atención al Cliente</h3>
 
                     <div className="horarios-atencion">
-                        <p><b className="dias">Lunes a Jueves</b>: 7:00 - 17:00</p>
-                        <p><b className="dias">Viernes</b>: 7:00 - 15:30</p>
+                        <p><b className="dias">Lunes a Jueves</b>: 7:30 - 12:00 y 13:00 - 16:00</p>
+                        <p><b className="dias">Viernes</b>: 7:30 - 12:00 y 13:00 - 15:00</p>
                         <p><b className="dias">Fin de Semana/Feriados</b>: <i>Cerrado</i></p>
                     </div>
                     

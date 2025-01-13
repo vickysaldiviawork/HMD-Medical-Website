@@ -374,6 +374,14 @@ footer {
         margin-bottom: 2em;
     }
 }
+
+@media (max-width: 320px){
+    .horarios-atencion p{
+        margin: 4px;
+        padding: 0px 6px;
+        font-size: 0.9em;
+    }
+}
 /********************************* FOOTER *********************************/
 /********************************* FOOTER *********************************/
 
@@ -1556,6 +1564,8 @@ footer {
     .card-info {
         font-size: 0.9rem; /* Ajusta el tamaño del texto */
         padding: 0.6rem 1.2rem;
+        line-height: 1.2rem;
+        margin: 0;
     }
 
     .card-boton {
@@ -1563,7 +1573,9 @@ footer {
         padding: 0.6rem 1.2rem;
     }
     .flip-card {
-        height: auto; /* Ajusta la altura para pantallas más pequeñas */
+        min-width: 140px;
+        max-width:250px;
+        height: 20rem;
         margin: 10px 0;
     }
 }
