@@ -1,40 +1,36 @@
-import WhatsappPopUp from "../components/WhatsappPopUp";
 import FlipCard from "../components/FlipCard";
 import { FaTruckFast } from "react-icons/fa6";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { TbPigMoney } from "react-icons/tb";
 
+import { FaArrowRight } from 'react-icons/fa';
+
 import AntibacterialImg from "../assets/antibacterial.png";
 import EcosonogramaImg from "../assets/ecosonograma.png";
 import DesinfectanteImg from "../assets/desinfectante.png";
-import MuestrasImg from "../assets/muestras.png";
 
 import { Link } from "react-router-dom";
+import ContactFloatingButton from "../components/ContactFloatingButton";
 
 
 const Home = () => {
 
     const categories = [
         {
-            title: "Antibacteriales y Geles",
-            description: "Geles antibacteriales en diversas presentaciones, desde 100ml hasta galones.",
+            title: "Control de Infecciones",
+            description: "Geles antibacteriales, desinfectantes hospitalarios, y más.",
             link: AntibacterialImg 
         },
         {
-            title: "Biogel y Soluciones Ultrasónicas",
-            description: "Productos ideales para diagnósticos y procedimientos clínicos.",
+            title: "Apoyo Diagnóstico",
+            description: "Geles para ultrasonidos, recolectores de muestras, y más.",
             link: EcosonogramaImg 
         },
         {
-            title: "Soluciones Desinfectantes",
-            description: "Clorhexidina y amonio cuaternario en galones para desinfección.",
+            title: "Cuidado del Paciente",
+            description: "Lubricantes íntimos, productos de higiene, y más.",
             link: DesinfectanteImg 
         },
-        {
-            title: "Recolectores y Kits Médicos",
-            description: "Recolectores de orina y heces, además de kits desechables.",
-            link: MuestrasImg 
-        }
     ];
 
 
@@ -66,7 +62,6 @@ const Home = () => {
                                 </div>
                                 <h3>Entrega Inmediata</h3>
                                 <p>Recibe tus productos sin demoras.</p>
-                                <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="boton-contacto-home">Contáctanos</a>
                             </div>
 
                             <div className="caracteristicas-item">
@@ -80,7 +75,6 @@ const Home = () => {
                                 </div>
                                 <h3>Atención Personalizada</h3>
                                 <p>Estamos contigo en cada paso.</p>
-                                <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="boton-contacto-home">Contáctanos</a>
                             </div>
 
                             <div className="caracteristicas-item">
@@ -94,7 +88,6 @@ const Home = () => {
                                 </div>
                                 <h3>Precios Competitivos</h3>
                                 <p>La mejor calidad al mejor precio.</p>
-                                <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="boton-contacto-home">Contáctanos</a>
                             </div>
                         </div>
 
@@ -106,7 +99,8 @@ const Home = () => {
                 {/* Tercera Sección: Acceso al catálogo */}
                 <section className="third-section-home-page">
                     <div className="content-wrapper">
-                        <h1>Explora nuestro <a href="https://drive.google.com/file/d/15NVln3OKnJu7ioEm_YC2-_84eFgsPu1C/view?usp=sharing" target="_blank">catálogo</a></h1>
+                        <h1>Soluciones para cada necesidad médica</h1>
+                        <p className="section-subtitle">Productos diseñados para optimizar los procesos en instituciones de salud</p>
                         <div className="catalog-container">
                             {categories.map((category, index) => (
                                 <FlipCard
@@ -117,7 +111,10 @@ const Home = () => {
                                 />
                             ))}
                         </div>
-                        <h1>...¡y más!</h1>
+                        <Link to="/catalog" className="catalog-ref-link">
+                            Visualiza nuestros productos
+                            <FaArrowRight className="arrow-icon" />
+                        </Link>
                     </div>
                 </section>
 
@@ -127,14 +124,13 @@ const Home = () => {
                         <h1>Suministros Esenciales, Cuidado Excepcional</h1>
                         <p><strong>Enfocados, confiables y eficientes.</strong><br/>Nuestra selección cuidadosamente elaborada de suministros médicos está aquí para apoyarte: ofrecemos productos de confianza con un servicio inigualable.</p>
                         <p>Trabajemos juntos — ¡contáctanos hoy mismo!</p>
-                        <a href="https://api.whatsapp.com/message/MH253DEAQCSQK1?autoload=1&app_absent=0" target = "_blank" className="fourth-section-boton-contacto">Contáctanos</a>
                     </div>
                 </section>
 
             </div>
 
-            {/* WhatsApp PopUp */}
-            <WhatsappPopUp />
+            {/* Botón de contacto flotante */}
+            <ContactFloatingButton />
         </>
     );
 };

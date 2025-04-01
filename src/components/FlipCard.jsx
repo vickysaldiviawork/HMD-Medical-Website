@@ -8,7 +8,6 @@ const FlipCard = ({ title, description, link }) => {
                 <h1 className="card-title">{title}</h1>
                 
                 <p className="card-info">{description}</p>
-                <button className="card-boton">Ver Catálogo</button>
             </div>
         </div>
     );

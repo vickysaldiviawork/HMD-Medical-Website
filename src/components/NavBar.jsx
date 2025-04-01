@@ -18,8 +18,9 @@ export const NavBar = () => {
 
                 <nav className={`links-navbar ${menuOpen ? 'open' : ''}`}>
                     <Link to="/" className="links">Inicio</Link>
-                    <Link to="/contact" className="links">Contacto</Link>
+                    <Link to="/catalog" className="links">Catálogo</Link>
                     <Link to="/us" className="links">Nosotros</Link>
+                    <Link to="/contact" className="links">Contacto</Link>
                 </nav>
 
             

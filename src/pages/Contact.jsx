@@ -25,12 +25,26 @@ const Contact = () => {
                         <span className='emailContact'><b>Email:</b> hmdventas@hmdmedical.net</span>
                     </div>
 
-                    <div className="info-item">
-                        <FaMapMarkerAlt className="contact-icon" />
-                        <span className='direccion-contact'><b>Dirección:</b> Guatire, Estado Miranda, Venezuela.</span>
+                    <div className="info-item map-container">
+                            <div className="map-header">
+                                <FaMapMarkerAlt className="contact-icon" />
+                                <span className='direccion-contact'><b>Dirección:</b> Guatire, Estado Miranda, Venezuela.</span>
+                            </div>
+
+                            <div className="embedded-map">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.14683511589!2d-66.54278598571478!3d10.213179592729408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a60dca6d5dc75%3A0xf4c601d80b4f3636!2sGuatire%2C%20Miranda%2C%20Venezuela!5e0!3m2!1sen!2sus!4v1623862726828!5m2!1sen!2sus"
+                                    style={{ border: 0 }}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    className="custom-map"
+                                />
+                            </div>
+                        </div>
                     </div>
 
-                </div>
+
 
                 <div className='contact-info'>
                     <div className='adicional-contact'>
