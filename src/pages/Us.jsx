@@ -1,9 +1,13 @@
+import { FaHandHoldingMedical, FaUserDoctor } from "react-icons/fa6";
+
 import "../global.css";
+import { FaBriefcaseMedical, FaPumpMedical, FaPumpSoap } from "react-icons/fa";
+import { BiPlusMedical } from "react-icons/bi";
 
 
 const Us = () => {
-    return <> 
-    
+    return <>
+
         <div className="about-us">
             <section className="first-section-about-us">
                 <h1>¿Quiénes Somos?</h1>
@@ -51,58 +55,88 @@ const Us = () => {
                 </div>
                 <div className="img-second-section-about"></div>
             </section>
-            
-            <section className="fourth-section-about-us">
-                <div className="content-fourth-section-about">
-                    <h1>Lo que ofrecemos</h1>
-                    <p>
-                    Nuestro portafolio incluye productos esenciales para clínicas, hospitales y otros establecimientos médicos, que aseguran que los profesionales de la salud cuenten con herramientas confiables y de calidad para su labor diaria:
-                    </p>
-                    <div className="productos-grid">
-                    <div className="productos-columna">
-                        <div className="producto-item">
-                        <h3>BIOCLORHEX® Solución Tópica Antimicrobiana (gluconato de clorhexidina al 2%)</h3>
-                        <p>Ideal para la desinfección de heridas y la prevención de infecciones.</p>
-                        </div>
-                        <div className="producto-item">
-                        <h3>BIOGER Desinfectante de Alto Poder</h3>
-                        <p>Una solución eficaz para mantener espacios libres de microorganismos.</p>
-                        </div>
-                        <div className="producto-item">
-                        <h3>BIOCLORHEX Jabonoso (gluconato de clorhexidina al 2%)</h3>
-                        <p>Limpieza profunda y protección para uso clínico.</p>
-                        </div>
+
+            <section className="products-section">
+                <div className="products-container">
+                    <div className="section-header">
+                        <h2>LO QUE OFRECEMOS</h2>
+                        <p className="section-description">
+                            Nuestro portafolio incluye productos esenciales para clínicas, hospitales y otros establecimientos médicos,
+                            que aseguran que los profesionales de la salud cuenten con herramientas confiables y de calidad para su labor diaria.
+                        </p>
                     </div>
-                    <div className="productos-columna">
-                        <div className="producto-item">
-                        <h3>Cepillos Quirúrgicos BIOSCRUB</h3>
-                        <p>Presentaciones con Bomuro de bencil al 1%, seco, yodo al 7,5% y gluconato de clorhexidina al 4%.</p>
+
+                    <div className="products-grid">
+                        {/* Columna 1 */}
+                        <div className="product-card">
+                            <div className="product-icon">
+                                <FaPumpSoap />
+                            </div>
+                            <h3>BIOCLORHEX</h3>
+                            <p className="product-subtitle">Solución Tópica Antimicrobiana (gluconato de clorhexidina al 2%)</p>
+                            <p className="product-description">Ideal para la desinfección de heridas y la prevención de infecciones.</p>
                         </div>
-                        <div className="producto-item">
-                        <h3>BIOGEL Gel para Ultrasonidos</h3>
-                        <p>Especialmente formulado para procedimientos de imagenología.</p>
+
+                        {/* Columna 2 */}
+                        <div className="product-card">
+                            <div className="product-icon">
+                                <FaHandHoldingMedical />
+                            </div>
+                            <h3>BIOGER</h3>
+                            <p className="product-subtitle">Desinfectante de Alto Poder</p>
+                            <p className="product-description">Una solución eficaz para mantener espacios libres de microorganismos.</p>
                         </div>
-                        <div className="producto-item">
-                        <h3>Recolectores de Orina de Tapa Roja</h3>
-                        <p>Prácticos y seguros para el manejo de muestras.</p>
+
+                        {/* Columna 3 */}
+                        <div className="product-card">
+                            <div className="product-icon">
+                                <FaPumpMedical />
+                            </div>
+                            <h3>BIOCLORHEX Jabonoso</h3>
+                            <p className="product-subtitle">(gluconato de clorhexidina al 2%)</p>
+                            <p className="product-description">Limpieza profunda y protección para uso clínico.</p>
                         </div>
-                        <div className="producto-item">
-                        <h3>Lubricantes Íntimos BIOGEL</h3>
-                        <p>Variedades con aromas naturales, piña colada, chicle y chocolate, diseñados para brindar confort y calidad.</p>
+                        {/* Columna 4 */}
+                        <div className="product-card">
+                            <div className="product-icon">
+                                <BiPlusMedical />
+                            </div>
+                            <h3>BIOSCRUB</h3>
+                            <p className="product-subtitle">Cepillos Quirúrgicos</p>
+                            <p className="product-description">Presentaciones con Bomuro de bencil al 1%, seco, yodo al 7,5% y gluconato de clorhexidina al 4%.</p>
                         </div>
+
+                        {/* Columna 5 */}
+                        <div className="product-card">
+                            <div className="product-icon">
+                                <FaUserDoctor />
+                            </div>
+                            <h3>BIOGEL</h3>
+                            <p className="product-subtitle">Gel para Ultrasonidos</p>
+                            <p className="product-description">Especialmente formulado para procedimientos de imagenología.</p>
+                            <p className="product-subtitle">Lubricantes íntimos</p>
+                            <p className="product-description">Especialmente formulado para procedimientos de imagenología.</p>
+                        </div>
+
+                        {/* Columna 5 */}
+                        <div className="product-card">
+                            <div className="product-icon">
+                                <FaBriefcaseMedical />
+                            </div>
+                            <h3>Recolectores de Muestra</h3>
+                            <p className="product-subtitle">Orina y Heces de Tapa Roja</p>
+                            <p className="product-description">Prácticos y seguros para el manejo de muestras.</p>
+                        </div>
+
+
                     </div>
-                    </div>
-                    <p className="texto-explora-catalogo">
-                    <a href="https://drive.google.com/file/d/15NVln3OKnJu7ioEm_YC2-_84eFgsPu1C/view?usp=sharing" target="_blank">Explora nuestro catálogo</a>
-                    </p>
                 </div>
-                </section>
+            </section>
 
 
 
-            
         </div>
-    
+
     </>
 };
 

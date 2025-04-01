@@ -1,20 +1,23 @@
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
-import '../global.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+import banner1 from '../assets/banner1.jpg';
+import banner2 from '../assets/banner2.jpg';
+import banner3 from '../assets/banner3.jpg';
 
 const HeroCarousel = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
-        arrows: true,
+        autoplaySpeed: 6000,
+        pauseOnHover: false,
+        arrows: false,
         responsive: [
             {
                 breakpoint: 768,
@@ -25,46 +28,62 @@ const HeroCarousel = () => {
         ]
     };
 
-    // Datos del carrusel (modificar con tus imágenes y contenido)
+    // Enlace directo a WhatsApp con mensaje predefinido
+    const whatsappLink = "https://api.whatsapp.com/send?phone=584242273484&text=Buenas,%20estoy%20interesado/a%20en%20conocer%20sobre%20sus%20promociones%20y/o%20descuentos";
+
     const slides = [
         {
+            title: "HMD Medical Venezuela",
+            subtitle: "Tu aliado confiable en salud",
+            image: banner2,
+            ctaText: "Conócenos",
+            ctaLink: "/Us"
+        },
+        {
             title: "Nuevos Lanzamientos",
-            subtitle: "Descubre nuestra línea de antibacteriales",
-            image: "url('/src/assets/banner1.jpg')",
+            subtitle: "Descubre nuestras diferentes categorías de productos",
+            image: banner1,
             ctaText: "Ver Productos",
-            ctaLink: "/catalog"
+            ctaLink: "https://drive.google.com/file/d/15NVln3OKnJu7ioEm_YC2-_84eFgsPu1C/view?usp=sharing",
+            isExternal: true
         },
         {
-            title: "Oferta Especial",
-            subtitle: "Hasta 30% de descuento en soluciones desinfectantes",
-            image: "url('/src/assets/banner2.jpg')",
-            ctaText: "Aprovechar Oferta",
-            ctaLink: "/promociones"
+            title: "Ofertas Especiales",
+            subtitle: "Pregunta por nuestras promociones, descuentos y combos.",
+            image: banner3,
+            ctaText: "Ver Ofertas",
+            ctaLink: whatsappLink,
+            isExternal: true
         },
-        {
-            title: "Biogel Ultrasónico",
-            subtitle: "La mejor calidad para tus equipos médicos",
-            image: "url('/src/assets/banner3.jpg')",
-            ctaText: "Saber Más",
-            ctaLink: "/productos/biogel"
-        }
     ];
 
     return (
-        <div className="hero-carousel">
+        <div className="hero-carousel-container">
             <Slider {...settings}>
                 {slides.map((slide, index) => (
-                    <div key={index} className="carousel-slide">
-                        <div
-                            className="slide-background"
-                            style={{ backgroundImage: slide.image }}
+                    <div key={index} className="hero-slide">
+                        <div 
+                            className="slide-content"
+                            style={{ backgroundImage: `url(${slide.image})` }}
                         >
-                            <div className="slide-content">
-                                <h2>{slide.title}</h2>
-                                <p>{slide.subtitle}</p>
-                                <Link to={slide.ctaLink} className="cta-button">
-                                    {slide.ctaText}
-                                </Link>
+                            <div className="slide-overlay"></div>
+                            <div className="slide-text">
+                                <h1>{slide.title}</h1>
+                                <p className="slide-subtitle">{slide.subtitle}</p>
+                                {slide.isExternal ? (
+                                    <a 
+                                        href={slide.ctaLink} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="boton-nosotros-home"
+                                    >
+                                        {slide.ctaText}
+                                    </a>
+                                ) : (
+                                    <Link to={slide.ctaLink} className="boton-nosotros-home">
+                                        {slide.ctaText}
+                                    </Link>
+                                )}
                             </div>
                         </div>
                     </div>

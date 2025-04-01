@@ -5,12 +5,13 @@ import { TbPigMoney } from "react-icons/tb";
 
 import { FaArrowRight } from 'react-icons/fa';
 
-import AntibacterialImg from "../assets/antibacterial.png";
-import EcosonogramaImg from "../assets/ecosonograma.png";
-import DesinfectanteImg from "../assets/desinfectante.png";
+import AntibacterialImg from "../assets/ControlInfecciones.mp4";
+import EcosonogramaImg from "../assets/RecolectorMuestra.mp4";
+import DesinfectanteImg from "../assets/Higiene.mp4";
 
 import { Link } from "react-router-dom";
 import ContactFloatingButton from "../components/ContactFloatingButton";
+import HeroCarousel from "../components/HeroCarousel";
 
 
 const Home = () => {
@@ -32,18 +33,21 @@ const Home = () => {
             link: DesinfectanteImg 
         },
     ];
-
+    
 
     return (
         <>
+
+        
             <div className="home-page">
                 {/* Primera Sección: Overview */}
-                <section className="first-section-home-page">
+                <HeroCarousel />
+                {/* <section className="first-section-home-page">
                     <div className="content-wrapper">
                         <h1>HMD Medical Venezuela</h1>
                         <span></span>
                     </div>
-                </section>
+                </section> */}
 
                 {/* Segunda Sección: Características destacables */}
                 <section className="second-section-home-page">
@@ -91,8 +95,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <p>Conoce más sobre lo que nos hace únicos.</p>
-                        <Link to="/us" className="boton-nosotros-home">Descubre más</Link>
+                        <Link to="/us" className="catalog-ref-link">Conoce más sobre lo que nos hace únicos.</Link>
                     </div>
                 </section>
 
@@ -111,7 +114,7 @@ const Home = () => {
                                 />
                             ))}
                         </div>
-                        <Link to="/catalog" className="catalog-ref-link">
+                        <Link to="https://drive.google.com/drive/folders/1tqv3BXyZdG5VCpai5pVDvWGStijtaKej?usp=drive_link" className="catalog-ref-link">
                             Visualiza nuestros productos
                             <FaArrowRight className="arrow-icon" />
                         </Link>

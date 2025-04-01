@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Us from "./pages/Us";
 import NotFound from "./pages/NotFound"; // Agrega un componente de error si aún no existe
-import Catalog from "./pages/Catalog";
+
 
 // createHashRouter define las rutas de la página
 export const Router = createHashRouter([
@@ -26,10 +26,6 @@ export const Router = createHashRouter([
                 path: "/us",
                 element: <Us />,
             },
-            {
-                path: "/catalog",
-                element: <Catalog />,
-            }
         ],
     },
 ]);

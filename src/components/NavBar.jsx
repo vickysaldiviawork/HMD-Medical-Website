@@ -18,7 +18,7 @@ export const NavBar = () => {
 
                 <nav className={`links-navbar ${menuOpen ? 'open' : ''}`}>
                     <Link to="/" className="links">Inicio</Link>
-                    <Link to="/catalog" className="links">Catálogo</Link>
+                    <Link to="https://drive.google.com/drive/folders/1tqv3BXyZdG5VCpai5pVDvWGStijtaKej?usp=drive_link" target="_blank" className="links">Catálogo</Link>
                     <Link to="/us" className="links">Nosotros</Link>
                     <Link to="/contact" className="links">Contacto</Link>
                 </nav>
